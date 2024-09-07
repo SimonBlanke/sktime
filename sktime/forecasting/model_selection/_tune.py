@@ -20,6 +20,7 @@ from sklearn.model_selection import ParameterGrid, ParameterSampler, check_cv
 from sktime.datatypes import mtype_to_scitype
 from sktime.exceptions import NotFittedError
 from sktime.forecasting.base._delegate import _DelegatedForecaster
+from sktime.forecasting.base._base import BaseForecaster
 from sktime.forecasting.model_evaluation import evaluate
 from sktime.performance_metrics.base import BaseMetric
 from sktime.split.base import BaseSplitter
@@ -235,9 +236,9 @@ class BaseGridSearch(_DelegatedForecaster):
         results = pd.DataFrame(results)
 
         # Rank results, according to whether greater is better for the given scoring.
-        results[f"rank_{scoring_name}"] = results.loc[:, f"mean_{scoring_name}"].rank(
-            ascending=scoring.get_tag("lower_is_better")
-        )
+        results[f"rank_{scoring_name}"] = results.loc[
+            :, f"mean_{scoring_name}"
+        ].rank(ascending=scoring.get_tag("lower_is_better"))
 
         self.cv_results_ = results
 
@@ -252,7 +253,9 @@ class BaseGridSearch(_DelegatedForecaster):
             )
         self.best_score_ = results.loc[self.best_index_, f"mean_{scoring_name}"]
         self.best_params_ = results.loc[self.best_index_, "params"]
-        self.best_forecaster_ = self.forecaster.clone().set_params(**self.best_params_)
+        self.best_forecaster_ = self.forecaster.clone().set_params(
+            **self.best_params_
+        )
 
         # Refit model with best parameters.
         if self.refit:
@@ -266,7 +269,9 @@ class BaseGridSearch(_DelegatedForecaster):
         # Select n best forecaster
         self.n_best_forecasters_ = []
         self.n_best_scores_ = []
-        _forecasters_to_return = min(self.return_n_best_forecasters, len(results.index))
+        _forecasters_to_return = min(
+            self.return_n_best_forecasters, len(results.index)
+        )
         if _forecasters_to_return == -1:
             _forecasters_to_return = len(results.index)
         for i in range(_forecasters_to_return):
@@ -640,9 +645,13 @@ class ForecastingGridSearchCV(BaseGridSearch):
         for p in param_grid:
             for name, v in p.items():
                 if isinstance(v, np.ndarray) and v.ndim > 1:
-                    raise ValueError("Parameter array should be one-dimensional.")
+                    raise ValueError(
+                        "Parameter array should be one-dimensional."
+                    )
 
-                if isinstance(v, str) or not isinstance(v, (np.ndarray, Sequence)):
+                if isinstance(v, str) or not isinstance(
+                    v, (np.ndarray, Sequence)
+                ):
                     raise ValueError(
                         f"Parameter grid for parameter ({name}) needs to"
                         f" be a list or numpy array, but got ({type(v)})."
@@ -906,7 +915,9 @@ class ForecastingRandomizedSearchCV(BaseGridSearch):
         """Search n_iter candidates from param_distributions."""
         return evaluate_candidates(
             ParameterSampler(
-                self.param_distributions, self.n_iter, random_state=self.random_state
+                self.param_distributions,
+                self.n_iter,
+                random_state=self.random_state,
             )
         )
 
@@ -926,7 +937,9 @@ class ForecastingRandomizedSearchCV(BaseGridSearch):
         """
         from sktime.forecasting.naive import NaiveForecaster
         from sktime.forecasting.trend import PolynomialTrendForecaster
-        from sktime.performance_metrics.forecasting import MeanAbsolutePercentageError
+        from sktime.performance_metrics.forecasting import (
+            MeanAbsolutePercentageError,
+        )
         from sktime.split import SingleWindowSplitter
 
         params = {
@@ -1227,7 +1240,9 @@ class ForecastingSkoptSearchCV(BaseGridSearch):
             )
         self.best_score_ = results.loc[self.best_index_, f"mean_{scoring_name}"]
         self.best_params_ = results.loc[self.best_index_, "params"]
-        self.best_forecaster_ = self.forecaster.clone().set_params(**self.best_params_)
+        self.best_forecaster_ = self.forecaster.clone().set_params(
+            **self.best_params_
+        )
 
         # Refit model with best parameters.
         if self.refit:
@@ -1288,7 +1303,9 @@ class ForecastingSkoptSearchCV(BaseGridSearch):
             # hacky approach to handle unhashable type objects
             if "forecaster" in search_space:
                 forecasters = search_space.get("forecaster")
-                mapping = {num: estimator for num, estimator in enumerate(forecasters)}
+                mapping = {
+                    num: estimator for num, estimator in enumerate(forecasters)
+                }
                 search_space["forecaster"] = list(mapping.keys())
                 mappings.append(mapping)
             else:
@@ -1388,7 +1405,9 @@ class ForecastingSkoptSearchCV(BaseGridSearch):
         # Update optimizer with evaluation metrics.
         optimizer.tell(candidate_params, scores)
         # keep updating the cv_results_ attribute by concatenating the result dataframe
-        self.cv_results_ = pd.concat([self.cv_results_, results_df], ignore_index=True)
+        self.cv_results_ = pd.concat(
+            [self.cv_results_, results_df], ignore_index=True
+        )
 
         try:
             assert len(out) >= 1
@@ -1466,7 +1485,8 @@ class ForecastingSkoptSearchCV(BaseGridSearch):
                     if (not isinstance(n_iter, int)) or n_iter < 0:
                         raise ValueError(
                             "Number of iterations in search space should be"
-                            "positive integer, got %s in tuple %s " % (n_iter, elem)
+                            "positive integer, got %s in tuple %s "
+                            % (n_iter, elem)
                         )
 
                     # save subspaces here for further checking
@@ -1506,7 +1526,9 @@ class ForecastingSkoptSearchCV(BaseGridSearch):
         """
         from sktime.forecasting.naive import NaiveForecaster
         from sktime.forecasting.trend import PolynomialTrendForecaster
-        from sktime.performance_metrics.forecasting import MeanAbsolutePercentageError
+        from sktime.performance_metrics.forecasting import (
+            MeanAbsolutePercentageError,
+        )
         from sktime.split import SingleWindowSplitter
 
         params = {
@@ -1542,7 +1564,9 @@ def _fit_and_score_skopt(params, meta):
     dimensions = meta["dimensions"]
     test_score_name = meta["test_score_name"]
 
-    @use_named_args(dimensions)  # decorator to convert candidate param list to dict
+    @use_named_args(
+        dimensions
+    )  # decorator to convert candidate param list to dict
     def _fit_and_score(**params):
         # Clone forecaster.
         forecaster = meta["forecaster"].clone()
@@ -1822,13 +1846,16 @@ class ForecastingOptunaSearchCV(BaseGridSearch):
             )
         self.best_score_ = results.loc[self.best_index_, f"mean_{scoring_name}"]
         self.best_params_ = results.loc[self.best_index_, "params"]
-        self.best_forecaster_ = self.forecaster.clone().set_params(**self.best_params_)
+        self.best_forecaster_ = self.forecaster.clone().set_params(
+            **self.best_params_
+        )
 
         if self.refit:
             self.best_forecaster_.fit(y, X, fh)
 
         results = results.sort_values(
-            by=f"mean_{scoring_name}", ascending=scoring.get_tag("lower_is_better")
+            by=f"mean_{scoring_name}",
+            ascending=scoring.get_tag("lower_is_better"),
         )
         self.n_best_forecasters_ = []
         self.n_best_scores_ = []
@@ -1899,7 +1926,9 @@ class ForecastingOptunaSearchCV(BaseGridSearch):
             "scoring": "MeanAbsolutePercentageError(symmetric=True)",
             "update_behaviour": "no_update",
         }
-        scorer_with_lower_is_better_false = MeanAbsolutePercentageError(symmetric=True)
+        scorer_with_lower_is_better_false = MeanAbsolutePercentageError(
+            symmetric=True
+        )
         scorer_with_lower_is_better_false.set_tags(**{"lower_is_better": False})
         params4 = {
             "forecaster": NaiveForecaster(strategy="mean"),
@@ -1919,11 +1948,15 @@ class ForecastingOptunaSearchCV(BaseGridSearch):
 
         for (
             param_grid_dict
-        ) in self._param_grid:  # Assuming self._param_grid is now a list of dicts
+        ) in (
+            self._param_grid
+        ):  # Assuming self._param_grid is now a list of dicts
             scoring_direction = (
                 "minimize" if scoring.get_tag("lower_is_better") else "maximize"
             )
-            study = optuna.create_study(direction=scoring_direction, sampler=sampler)
+            study = optuna.create_study(
+                direction=scoring_direction, sampler=sampler
+            )
             meta = {}
             meta["forecaster"] = self.forecaster
             meta["y"] = y
@@ -1936,7 +1969,8 @@ class ForecastingOptunaSearchCV(BaseGridSearch):
             for _ in range(self.n_evals):
                 trial = study.ask(param_grid_dict)
                 params = {
-                    name: trial.params[name] for name, v in param_grid_dict.items()
+                    name: trial.params[name]
+                    for name, v in param_grid_dict.items()
                 }
 
                 out = _fit_and_score(params, meta)
@@ -1949,8 +1983,96 @@ class ForecastingOptunaSearchCV(BaseGridSearch):
 
             # Add the parameters as a new column to the DataFrame
             results["params"] = params_list
-            all_results.append(results)  # Append the results DataFrame to the list
+            all_results.append(
+                results
+            )  # Append the results DataFrame to the list
 
         # Combine all results into a single DataFrame
         combined_results = pd.concat(all_results, ignore_index=True)
-        return combined_results.rename(columns={"value": f"mean_{scoring_name}"})
+        return combined_results.rename(
+            columns={"value": f"mean_{scoring_name}"}
+        )
+
+
+class ObjectiveFunctionAdapter:
+    def __init__(self, meta, scoring_name) -> None:
+        self.meta = meta
+        self.scoring_name = scoring_name
+
+    def objective_function(self, params):
+        out = _fit_and_score(params, self.meta)
+        return self._get_score(out, self.scoring_name)
+
+    def _get_score(self, out, scoring_name):
+        return out[f"mean_{scoring_name}"]
+
+
+class ForecastingHyperactiveSearchCV(BaseForecaster):
+    def __init__(
+        self,
+        forecaster,
+        cv,
+        params_config,
+        scoring=None,
+        strategy="refit",
+        refit=True,
+        error_score=np.nan,
+    ):
+        super().__init__()
+
+        self.forecaster = forecaster
+        self.cv = cv
+        self.params_config = params_config
+        self.scoring = scoring
+        self.strategy = strategy
+        self.refit = refit
+        self.error_score = error_score
+
+    def _fit(self, y, X=None, fh=None):
+        cv = check_cv(self.cv)
+        scoring = check_scoring(self.scoring, obj=self)
+        scoring_name = f"test_{scoring.name}"
+
+        results = self._run_search(
+            y,
+            X,
+            cv,
+            scoring,
+            scoring_name,
+        )
+
+        if self.refit:
+            self.best_forecaster_.fit(y, X, fh)
+
+        return self
+
+    def _run_search(self, y, X, cv, scoring, scoring_name):
+        from hyperactive import Hyperactive
+
+        meta = {}
+        meta["forecaster"] = self.forecaster
+        meta["y"] = y
+        meta["X"] = X
+        meta["cv"] = cv
+        meta["strategy"] = self.strategy
+        meta["scoring"] = scoring
+        meta["error_score"] = self.error_score
+        meta["scoring_name"] = scoring_name
+
+        adapter = ObjectiveFunctionAdapter(meta, scoring_name)
+        objective_function = adapter.objective_function
+
+        hyper = Hyperactive()
+        hyper.add_search(
+            objective_function,
+            search_space=self.params_config,
+            optimizer=optimizer,
+            n_iter=100,
+        )
+        hyper.run()
+
+        self.best_params_ = hyper.best_para(objective_function)
+        self.best_score_ = hyper.best_score(objective_function)
+        self.best_forecaster_ = self.forecaster.clone().set_params(
+            **self.best_params_
+        )
