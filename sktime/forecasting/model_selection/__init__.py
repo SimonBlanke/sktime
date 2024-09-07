@@ -4,6 +4,7 @@
 
 __all__ = [
     "ForecastingGridSearchCV",
+    "ForecastingHyperactiveSearchCV",
     "ForecastingRandomizedSearchCV",
     "ForecastingSkoptSearchCV",
     "ForecastingOptunaSearchCV",
@@ -14,6 +15,7 @@ __all__ = [
 
 from sktime.forecasting.model_selection._tune import (
     ForecastingGridSearchCV,
+    ForecastingHyperactiveSearchCV,
     ForecastingOptunaSearchCV,
     ForecastingRandomizedSearchCV,
     ForecastingSkoptSearchCV,
@@ -43,7 +45,12 @@ def temporal_train_test_split(
     )
 
     return _tts(
-        y=y, X=X, test_size=test_size, train_size=train_size, fh=fh, anchor=anchor
+        y=y,
+        X=X,
+        test_size=test_size,
+        train_size=train_size,
+        fh=fh,
+        anchor=anchor,
     )
 
 
@@ -67,13 +74,19 @@ def ExpandingWindowSplitter(fh=1, initial_window=10, step_length=1):
         DeprecationWarning,
     )
 
-    return _EWSplitter(fh=fh, initial_window=initial_window, step_length=step_length)
+    return _EWSplitter(
+        fh=fh, initial_window=initial_window, step_length=step_length
+    )
 
 
 # todo 0.33.0 - check whether we should remove, otherwise bump
 # still used in blog posts and old tutorials
 def SlidingWindowSplitter(
-    fh=1, window_length=10, step_length=1, initial_window=None, start_with_window=True
+    fh=1,
+    window_length=10,
+    step_length=1,
+    initial_window=None,
+    start_with_window=True,
 ):
     """Legacy export of Sliding window splitter.
 
