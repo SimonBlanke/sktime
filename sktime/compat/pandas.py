@@ -377,11 +377,6 @@ def offset_freq(name):
     ------
     ValueError
         If *name* is not a recognized canonical frequency name.
-
-    Examples
-    --------
-    >>> from sktime.compat.pandas import offset_freq
-    >>> idx = pd.date_range("2020", periods=3, freq=offset_freq("month_end"))
     """
     if name not in _OFFSET_CANONICAL:
         raise ValueError(
@@ -437,11 +432,6 @@ def period_freq(name):
     ------
     ValueError
         If *name* is not a recognized period frequency name.
-
-    Examples
-    --------
-    >>> from sktime.compat.pandas import period_freq
-    >>> idx = pd.period_range("2020-01", periods=3, freq=period_freq("month"))
     """
     if name not in _PERIOD_CANONICAL:
         raise ValueError(
@@ -478,10 +468,6 @@ def df_map(df):
     callable
         ``df.map`` if available, otherwise ``df.applymap``.
 
-    Examples
-    --------
-    >>> df = pd.DataFrame({"a": [1, 2]})
-    >>> result = df_map(df)(str)
     """
     if hasattr(df, "map"):
         return df.map
