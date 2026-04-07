@@ -109,13 +109,13 @@ class TestEnsureCompat:
         df = _pd.DataFrame({"a": [1, 2]})
         result = ensure_compat(df)
         assert type(result) is CompatDataFrame
-        assert result is df
+        assert type(df) is _pd.DataFrame  # original unchanged
 
     def test_converts_series(self):
         s = _pd.Series([1, 2])
         result = ensure_compat(s)
         assert type(result) is CompatSeries
-        assert result is s
+        assert type(s) is _pd.Series  # original unchanged
 
     def test_noop_on_compat_dataframe(self):
         df = CompatDataFrame({"a": [1]})
@@ -170,18 +170,18 @@ class TestEnsureNative:
     def test_reverts_datetime_index(self):
         idx = _pd.date_range("2020-01-01", periods=3, freq="D")
         df = _pd.DataFrame({"v": [1, 2, 3]}, index=idx)
-        ensure_compat(df)
-        assert type(df.index) is CompatDatetimeIndex
-        ensure_native(df)
-        assert type(df.index) is _pd.DatetimeIndex
+        compat_df = ensure_compat(df)
+        assert type(compat_df.index) is CompatDatetimeIndex
+        ensure_native(compat_df)
+        assert type(compat_df.index) is _pd.DatetimeIndex
 
     def test_roundtrip_preserves_data(self):
         original = _pd.DataFrame({"x": [1.5, 2.5], "y": ["a", "b"]})
-        ensure_compat(original)
-        ensure_native(original)
-        assert type(original) is _pd.DataFrame
-        assert list(original["x"]) == [1.5, 2.5]
-        assert list(original["y"]) == ["a", "b"]
+        compat = ensure_compat(original)
+        native = ensure_native(compat)
+        assert type(native) is _pd.DataFrame
+        assert list(native["x"]) == [1.5, 2.5]
+        assert list(native["y"]) == ["a", "b"]
 
 
 class TestModuleProxy:
