@@ -1,8 +1,8 @@
 from unittest.mock import MagicMock
 
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.naive import NaiveForecaster
 from sktime.pipeline.step import Step, StepResult
 from sktime.transformations.series.exponent import ExponentTransformer

@@ -2,8 +2,8 @@
 
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 __author__ = ["fkiraly"]

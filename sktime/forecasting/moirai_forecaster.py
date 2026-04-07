@@ -2,9 +2,9 @@
 
 from unittest.mock import patch
 
-import pandas as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import _BaseGlobalForecaster
 
 __author__ = ["gorold", "chenghaoliu89", "liu-jc", "benheid", "pranavvp16"]
@@ -20,7 +20,8 @@ class MOIRAIForecaster(_BaseGlobalForecaster):
     checkpoint_path : str, default=None
         Path to the checkpoint of the model. Supported weights are available at [1]_.
     context_length : int, default=200
-        Length of the context window, time points the model will take as input for inference.
+        Length of the context window, time points the model will take
+        as input for inference.
     patch_size : int, default=32
         Time steps to perform patching with.
     num_samples : int, default=100

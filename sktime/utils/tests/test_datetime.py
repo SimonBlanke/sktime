@@ -5,9 +5,9 @@ __author__ = ["xiaobenbenecho", "khrapovs"]
 import datetime
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.datatypes import VectorizedDF
 from sktime.datatypes._utilities import get_time_index

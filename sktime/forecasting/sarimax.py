@@ -5,8 +5,7 @@
 __all__ = ["SARIMAX"]
 __author__ = ["TNTran92", "yarnabrina"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base.adapters import _StatsModelsAdapter
 
 

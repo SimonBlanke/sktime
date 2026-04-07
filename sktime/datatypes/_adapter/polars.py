@@ -42,7 +42,7 @@ def is_monotonically_increasing(obj):
 
 def _convert_period_index_to_datetime_index(obj):
     """Convert PeriodIndex to DatetimeIndex as polars only supports DatetimeIndex."""
-    import pandas as pd
+    from sktime import pandapter as pd
 
     if isinstance(obj.index, pd.PeriodIndex):
         obj.index = obj.index.to_timestamp(freq=obj.index.freq)
@@ -128,8 +128,9 @@ def convert_polars_to_pandas(obj, infer_freq=True):
         by converting columns with names __index__[indexname] to MultiIndex levels,
         and other columns identical to those of obj.
     """
-    import pandas as pd
     from polars.lazyframe.frame import LazyFrame
+
+    from sktime import pandapter as pd
 
     # convert to DataFrame if LazyFrame
     if isinstance(obj, LazyFrame):

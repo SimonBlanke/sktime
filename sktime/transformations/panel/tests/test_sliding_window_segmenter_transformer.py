@@ -4,9 +4,9 @@ __author__ = ["mloning"]
 
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.panel.segment import SlidingWindowSegmenter
 from sktime.utils._testing.panel import _make_nested_from_array

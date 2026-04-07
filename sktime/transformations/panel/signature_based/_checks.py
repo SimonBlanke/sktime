@@ -7,8 +7,8 @@ sklearn signature checks.
 import functools
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.utils.validation.panel import check_X, check_X_y
 
 

@@ -2,10 +2,10 @@
 """Implements EnbPIForecaster."""
 
 import numpy as np
-import pandas as pd
 from sklearn.base import clone
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.forecasting.naive import NaiveForecaster
 from sktime.libs._aws_fortuna_enbpi.enbpi import EnbPI

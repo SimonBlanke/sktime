@@ -31,7 +31,8 @@ __author__ = ["fkiraly"]
 __all__ = ["convert_dict"]
 
 import numpy as np
-import pandas as pd
+
+from sktime import pandapter as pd
 
 ##############################################################
 # methods to convert one machine type to another machine type

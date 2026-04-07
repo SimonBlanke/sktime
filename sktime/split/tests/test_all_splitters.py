@@ -5,9 +5,9 @@ __author__ = ["fkiraly"]
 import types
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester
 from sktime.utils._testing.hierarchical import _make_hierarchical
 from sktime.utils._testing.series import _make_series

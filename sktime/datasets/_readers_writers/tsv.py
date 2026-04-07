@@ -3,8 +3,7 @@
 __author__ = ["TonyBagnall"]
 __all__ = ["load_from_ucr_tsv_to_dataframe"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets._readers_writers.utils import get_path
 
 

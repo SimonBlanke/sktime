@@ -3,8 +3,8 @@
 """TSB Forecasting Method."""
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 
 

@@ -4,10 +4,10 @@
 __author__ = ["fkiraly"]
 __all__ = []
 
-import pandas as pd
 import pytest
 from sklearn.preprocessing import StandardScaler
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_unit_test
 from sktime.datatypes import get_examples
 from sktime.tests.test_switch import run_test_module_changed

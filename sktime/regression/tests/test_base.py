@@ -5,9 +5,9 @@ __author__ = ["ksharma6"]
 import pickle
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.regression.base import BaseRegressor
 from sktime.regression.deep_learning.base import BaseDeepRegressor
 from sktime.regression.distance_based import KNeighborsTimeSeriesRegressor

@@ -5,8 +5,7 @@
 __author__ = ["mloning", "hyang1996", "kejsitake", "fkiraly"]
 __all__ = ["_PmdArimaAdapter"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_slice
 from sktime.forecasting.base import BaseForecaster
 from sktime.forecasting.base._base import DEFAULT_ALPHA

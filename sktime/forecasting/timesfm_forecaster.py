@@ -7,8 +7,8 @@ __author__ = ["rajatsen91", "geetu040"]
 import os
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon, _BaseGlobalForecaster
 from sktime.utils.singleton import _multiton
 

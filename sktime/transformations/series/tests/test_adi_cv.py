@@ -2,9 +2,9 @@
 """Tests for adi_cv transformers for time series Series."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.adi_cv import ADICVTransformer
 

@@ -1,9 +1,9 @@
 """Test suite for lower bounding techniques."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.distances.lower_bounding import LowerBounding
 from sktime.distances.tests._utils import create_test_distance_numpy
 from sktime.tests.test_switch import run_test_module_changed

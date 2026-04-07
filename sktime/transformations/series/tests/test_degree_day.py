@@ -8,8 +8,9 @@ These tests validate:
 """
 
 # Third-party imports.
-import pandas as pd
 import pytest
+
+from sktime import pandapter as pd
 
 # Local imports (within sktime).
 from sktime.tests.test_switch import run_test_for_class

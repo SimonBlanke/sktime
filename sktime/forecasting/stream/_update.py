@@ -4,8 +4,7 @@
 
 __author__ = ["fkiraly"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes import ALL_TIME_SERIES_MTYPES
 from sktime.datatypes._utilities import get_window
 from sktime.forecasting.base._delegate import _DelegatedForecaster

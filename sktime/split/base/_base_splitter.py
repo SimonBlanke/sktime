@@ -7,8 +7,8 @@ __author__ = ["fkiraly", "khrapovs", "mateuja", "mloning"]
 from collections.abc import Iterator
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.base import BaseObject
 from sktime.datatypes import check_is_scitype, convert
 from sktime.forecasting.base import ForecastingHorizon

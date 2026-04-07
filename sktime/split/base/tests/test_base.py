@@ -2,9 +2,9 @@
 """Tests for base splitter class and functionality."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.tests._config import (
     TEST_FHS,
     TEST_FHS_TIMEDELTA,

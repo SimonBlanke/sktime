@@ -1,8 +1,8 @@
 import numpy as np
-import pandas as pd
 import pytest
 from sklearn.linear_model import Ridge
 
+from sktime import pandapter as pd
 from sktime.classification.dummy import DummyClassifier
 from sktime.datasets import load_airline, load_arrow_head, load_longley
 from sktime.forecasting.compose import ForecastX, YfromX, make_reduction

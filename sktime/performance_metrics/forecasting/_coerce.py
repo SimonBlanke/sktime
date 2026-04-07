@@ -2,7 +2,8 @@
 """Output coercion utilities for metric classes."""
 
 import numpy as np
-import pandas as pd
+
+from sktime import pandapter as pd
 
 
 def _coerce_to_scalar(obj):

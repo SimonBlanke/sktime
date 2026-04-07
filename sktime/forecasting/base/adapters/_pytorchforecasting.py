@@ -11,10 +11,10 @@ from random import randint
 from typing import Any
 
 import numpy as np
-import pandas as pd
-from pandas.api.types import is_numeric_dtype
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon, _BaseGlobalForecaster
+from sktime.pandapter.api.types import is_numeric_dtype
 
 __all__ = ["_PytorchForecastingAdapter"]
 __author__ = ["XinyuWu"]

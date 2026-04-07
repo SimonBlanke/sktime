@@ -4,9 +4,9 @@
 __author__ = ["PBormann"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.param_est.cointegration import JohansenCointegration
 from sktime.utils.dependencies import _check_estimator_deps

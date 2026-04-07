@@ -1,9 +1,9 @@
 """Test detrenders."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.forecasting.trend import PolynomialTrendForecaster
 from sktime.forecasting.trend.tests.test_trend import get_expected_polynomial_coefs

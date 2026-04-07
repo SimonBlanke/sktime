@@ -6,8 +6,8 @@ __author__ = ["mloning", "fkiraly"]
 
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley, load_lynx, load_shampoo_sales
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.model_evaluation import evaluate

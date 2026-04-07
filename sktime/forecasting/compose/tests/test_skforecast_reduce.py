@@ -2,10 +2,10 @@
 
 __author__ = ["Abhay-Lejith", "yarnabrina"]
 
-import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal, assert_series_equal
 
+from sktime import pandapter as pd
 from sktime.forecasting.compose import SkforecastAutoreg, SkforecastRecursive
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils._testing.forecasting import make_forecasting_problem

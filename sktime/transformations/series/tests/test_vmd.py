@@ -5,9 +5,9 @@
 __author__ = ["fkiraly", "DaneLyttinen", "danferns"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.compose import TransformedTargetForecaster
 from sktime.forecasting.trend import TrendForecaster
 from sktime.libs.vmdpy import VMD

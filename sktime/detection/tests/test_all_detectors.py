@@ -3,8 +3,7 @@
 __author__ = ["miraep8", "fkiraly", "klam-data", "pyyim", "mgorlin"]
 __all__ = []
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.detection._datatypes._check import _is_valid_detection
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester
 from sktime.utils._testing.detection import make_detection_problem

@@ -3,8 +3,8 @@
 __author__ = ["ermshaua", "patrickzib"]
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.transformations.panel.matrix_profile import _sliding_dot_products
 from sktime.utils.numba.njit import njit
 

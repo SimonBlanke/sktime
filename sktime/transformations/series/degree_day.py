@@ -13,8 +13,7 @@ Definitions (daily):
     CDD   = max(0, tmean - base_temp)
 """
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 
@@ -64,7 +63,7 @@ class DegreeDayFeatures(BaseTransformer):
     --------
     Basic usage with explicit max/min temperature columns:
 
-    import pandas as pd
+    from sktime import pandapter as pd
     from sktime.transformations.series.degree_day import DegreeDayFeatures
     X = pd.DataFrame(
     ...     {"high": [60, 70, 90], "low": [40, 60, 70]},

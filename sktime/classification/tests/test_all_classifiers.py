@@ -4,9 +4,9 @@ __author__ = ["mloning", "TonyBagnall", "fkiraly"]
 
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.classification.tests._expected_outputs import (
     basic_motions_proba,
     unit_test_proba,

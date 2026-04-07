@@ -5,7 +5,6 @@ __author__ = ["danbartl"]
 import random
 
 import numpy as np
-import pandas as pd
 import pytest
 from sklearn.ensemble import (
     GradientBoostingRegressor,
@@ -15,6 +14,7 @@ from sklearn.ensemble import (
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_solar
 from sktime.datatypes import get_examples
 from sktime.forecasting.base import ForecastingHorizon

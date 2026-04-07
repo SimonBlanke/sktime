@@ -1,8 +1,8 @@
 import functools
 
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.transformations.hierarchical.reconcile._utils import (
     _get_series_for_each_hierarchical_level,

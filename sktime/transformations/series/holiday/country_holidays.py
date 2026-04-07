@@ -1,8 +1,7 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 """Implements transformer to add binary column based on country holidays."""
 
-import pandas
-
+from sktime import pandapter as pandas
 from sktime.transformations.base import BaseTransformer
 
 __author__ = ["yarnabrina"]

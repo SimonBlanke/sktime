@@ -2,8 +2,7 @@
 
 from pathlib import Path
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets._data_io import _reduce_memory_usage
 from sktime.datasets._dataset_downloader import DatasetDownloader
 from sktime.datasets.forecasting._base import BaseForecastingDataset

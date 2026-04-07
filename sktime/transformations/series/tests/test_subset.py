@@ -4,9 +4,9 @@
 
 __author__ = ["fkiraly"]
 
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley
 from sktime.forecasting.naive import NaiveForecaster
 from sktime.tests.test_switch import run_test_for_class

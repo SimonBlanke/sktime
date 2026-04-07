@@ -3,9 +3,9 @@
 __author__ = ["seigpe"]
 
 import numpy as np
-import pandas as pd
 from sklearn.cluster import KMeans
 
+from sktime import pandapter as pd
 from sktime.clustering.base import BaseClusterer
 
 

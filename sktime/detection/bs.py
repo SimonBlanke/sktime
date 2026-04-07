@@ -3,8 +3,8 @@
 from collections import deque
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 
 __author__ = ["Alex-JG3"]

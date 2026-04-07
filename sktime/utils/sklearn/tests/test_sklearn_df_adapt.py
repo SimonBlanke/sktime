@@ -3,9 +3,9 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.utils.sklearn._adapt_df import prep_skl_df
 

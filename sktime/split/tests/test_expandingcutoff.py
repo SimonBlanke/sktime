@@ -2,9 +2,9 @@
 """Tests for expanding cutoff splitter."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.split import ExpandingCutoffSplitter, ExpandingWindowSplitter
 from sktime.split.tests.test_split import _check_cv

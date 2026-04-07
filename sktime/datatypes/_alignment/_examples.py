@@ -22,8 +22,7 @@ Types of tests that can be performed with these examples:
   should yield the element exactly, identically, for examples of the same index.
 """
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._base import BaseExample
 
 ###

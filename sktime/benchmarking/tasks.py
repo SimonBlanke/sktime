@@ -3,8 +3,8 @@
 from inspect import signature
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.base import BaseObject
 
 

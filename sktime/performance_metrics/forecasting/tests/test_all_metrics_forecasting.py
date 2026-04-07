@@ -1,9 +1,9 @@
 """Tests for all sktime forecasting metrics - point forecasts."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester
 from sktime.utils._testing.panel import _make_panel
 from sktime.utils._testing.series import _make_series

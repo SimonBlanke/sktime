@@ -14,9 +14,9 @@ from inspect import getfullargspec, isclass, signature
 from tempfile import TemporaryDirectory
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator, BaseObject, load
 from sktime.classification.deep_learning.base import BaseDeepClassifier
 from sktime.dists_kernels.base import (

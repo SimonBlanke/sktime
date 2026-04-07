@@ -4,9 +4,9 @@ __author__ = ["Alex-JG3"]
 
 import datetime
 
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.detection.lof import SubLOF
 from sktime.tests.test_switch import run_test_for_class
 

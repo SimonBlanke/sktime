@@ -1,7 +1,6 @@
 """Auto-generate a classifier capabilities summary."""
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.registry import all_estimators
 
 # List of columns in the table

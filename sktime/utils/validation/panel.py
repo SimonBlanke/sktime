@@ -8,9 +8,9 @@ __all__ = [
 ]
 
 import numpy as np
-import pandas as pd
 from sklearn.utils.validation import check_consistent_length
 
+from sktime import pandapter as pd
 from sktime.datatypes._panel._check import _is_nested_dataframe
 from sktime.datatypes._panel._convert import (
     from_3d_numpy_to_nested,

@@ -4,9 +4,9 @@ import warnings
 from collections.abc import Callable
 
 import numpy as np
-import pandas as pd
 from scipy.spatial.distance import cdist
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 __author__ = ["KatieBuc"]

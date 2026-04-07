@@ -3,8 +3,7 @@
 import inspect
 from copy import deepcopy
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 
 ALLOWED_METHODS = [

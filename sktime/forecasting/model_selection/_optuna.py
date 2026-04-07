@@ -4,9 +4,9 @@
 from collections.abc import Iterable, Mapping
 
 import numpy as np
-import pandas as pd
 from sklearn.model_selection import check_cv
 
+from sktime import pandapter as pd
 from sktime.exceptions import NotFittedError
 from sktime.forecasting.model_selection._base import BaseGridSearch, _fit_and_score
 from sktime.utils.validation.forecasting import check_scoring

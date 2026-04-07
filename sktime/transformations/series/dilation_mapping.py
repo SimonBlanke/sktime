@@ -6,8 +6,7 @@ A transformer for applying dilation mapping to time series data.
 __author__ = ["fspinna"]
 __all__ = ["DilationMappingTransformer"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

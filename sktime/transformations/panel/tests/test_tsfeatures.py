@@ -3,9 +3,9 @@
 __author__ = ["Faakhir30"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.panel.tsfeatures import TSFeaturesTransformer
 from sktime.utils._testing.panel import _make_panel_X

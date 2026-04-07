@@ -12,12 +12,12 @@ __all__ = ["ProximityForest", "ProximityStump", "ProximityTree"]
 import math
 
 import numpy as np
-import pandas as pd
 from joblib import Parallel, delayed
 from scipy import stats
 from sklearn.preprocessing import normalize
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.classification.base import BaseClassifier
 from sktime.datatypes import convert
 from sktime.distances import (

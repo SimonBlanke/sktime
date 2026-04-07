@@ -2,9 +2,9 @@
 
 import warnings
 
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.base._proba._normal import Normal
 from sktime.performance_metrics.forecasting.probabilistic._classes import (
     CRPS,

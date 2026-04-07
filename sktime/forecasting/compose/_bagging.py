@@ -6,9 +6,9 @@ __author__ = ["fkiraly", "ltsaprounis"]
 
 
 import numpy as np
-import pandas as pd
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import update_data
 from sktime.forecasting.base import BaseForecaster
 from sktime.transformations.base import BaseTransformer

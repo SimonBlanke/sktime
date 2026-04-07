@@ -1,7 +1,8 @@
 """Utilities for detection tasks."""
 
 import numpy as np
-import pandas as pd
+
+from sktime import pandapter as pd
 
 
 def seg_middlepoint(seg_df):

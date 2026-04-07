@@ -1,8 +1,8 @@
 """Padding transformer, pad unequal length panel to max length or fixed length."""
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.pandas import df_map
 

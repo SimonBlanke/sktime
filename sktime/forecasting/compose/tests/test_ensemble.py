@@ -5,9 +5,9 @@
 __author__ = ["GuzalBulatova", "RNKuhns"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.compose import EnsembleForecaster
 from sktime.forecasting.compose._ensemble import VALID_AGG_FUNCS
 from sktime.forecasting.naive import NaiveForecaster

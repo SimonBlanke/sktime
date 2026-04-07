@@ -5,9 +5,9 @@
 __author__ = ["mloning", "Piyush1729", "Flix6x"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_cutoff
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.naive import NaiveForecaster

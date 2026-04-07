@@ -4,10 +4,10 @@ Implementing segmentation using clustering, Read more at
 <https://en.wikipedia.org/wiki/Cluster_analysis>_.
 """
 
-import pandas as pd
 from sklearn.base import clone
 from sklearn.cluster import KMeans
 
+from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 
 __author__ = ["Ankit-1204"]

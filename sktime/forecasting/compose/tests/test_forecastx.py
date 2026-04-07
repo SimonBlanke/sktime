@@ -8,10 +8,10 @@ __all__ = []
 from unittest import mock
 
 import numpy as np
-import pandas as pd
 import pytest
 from sklearn.svm import SVR
 
+from sktime import pandapter as pd
 from sktime.datasets import load_longley
 from sktime.forecasting.arima import ARIMA
 from sktime.forecasting.compose import ForecastX, make_reduction

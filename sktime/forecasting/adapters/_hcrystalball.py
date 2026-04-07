@@ -4,9 +4,9 @@
 
 __author__ = ["MichalChromcak"]
 
-import pandas as pd
 from sklearn.base import clone
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 
 

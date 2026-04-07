@@ -14,8 +14,7 @@ MultiIndex columns to DataFrame columns with the name:
 index is replaced by a string index where tuples are replaced with str coerced elements
 """
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._base._common import _req
 from sktime.datatypes._base._common import _ret as ret
 from sktime.datatypes._dtypekind import _get_feature_kind, _pandas_dtype_to_kind

@@ -11,9 +11,9 @@ __all__ = [
 import os
 
 import numpy as np
-import pandas as pd
 from joblib import Parallel, delayed
 
+from sktime import pandapter as pd
 from sktime.datasets._dataset_downloader import DatasetDownloader
 from sktime.datasets._readers_writers.ts import load_from_tsfile
 from sktime.datasets._readers_writers.utils import _alias_mtype_check

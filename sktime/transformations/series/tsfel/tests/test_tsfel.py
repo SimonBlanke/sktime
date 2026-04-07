@@ -5,9 +5,9 @@
 __author__ = ["Faakhir30"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.tsfel import TSFELTransformer
 from sktime.utils._testing.series import _make_series

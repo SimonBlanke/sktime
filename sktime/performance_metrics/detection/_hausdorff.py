@@ -1,8 +1,8 @@
 """Directed Hausdorff distance between two sets of points."""
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.performance_metrics.detection._base import BaseDetectionMetric
 from sktime.performance_metrics.detection.utils import _find_closest_elements
 

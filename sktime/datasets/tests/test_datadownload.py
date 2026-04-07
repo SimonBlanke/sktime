@@ -3,9 +3,9 @@
 from urllib.request import Request, urlopen
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import (
     _load_fpp3,
     load_forecastingdata,

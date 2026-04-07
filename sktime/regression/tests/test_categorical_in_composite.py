@@ -1,6 +1,6 @@
-import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
+from sktime import pandapter as pd
 from sktime.regression.distance_based import KNeighborsTimeSeriesRegressor
 from sktime.regression.model_selection import TSRGridSearchCV
 from sktime.transformations.series.adapt import TabularToSeriesAdaptor

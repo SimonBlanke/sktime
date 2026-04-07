@@ -3,9 +3,9 @@
 from math import ceil
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.utils._testing.series import _make_series
 from sktime.utils.seasonality import _pivot_sp, _unpivot_sp

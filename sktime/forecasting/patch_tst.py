@@ -12,9 +12,9 @@ __author__ = [
 
 
 import numpy as np
-import pandas as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon, _BaseGlobalForecaster
 from sktime.split import temporal_train_test_split
 from sktime.utils.dependencies import _safe_import

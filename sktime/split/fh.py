@@ -3,8 +3,8 @@
 """Forecasting horizon based train test split utility function."""
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.split.base import BaseSplitter
 from sktime.utils.validation.forecasting import check_fh
 

@@ -1,9 +1,9 @@
 """Testing panel converters - internal functions and more extensive fixtures."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import generate_example_long_table, make_multi_index_dataframe
 from sktime.datatypes._adapter import convert_from_multiindex_to_listdataset
 from sktime.datatypes._panel._check import _is_nested_dataframe, are_columns_nested
@@ -304,8 +304,8 @@ def test_from_nested_to_long(n_instances, n_columns, n_timepoints):
 def test_from_multiindex_to_listdataset(n_instances, n_columns, n_timepoints):
     """Test from multiindex DF to listdataset for gluonts."""
     import numpy as np
-    import pandas as pd
 
+    from sktime import pandapter as pd
     from sktime.datatypes import convert_to
 
     # from sktime.datatypes._adapters import convert_from_multiindex_to_listdataset

@@ -11,8 +11,8 @@ __author__ = ["davidgilbertson"]
 
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.split.base import BaseSplitter
 from sktime.split.base._common import SPLIT_GENERATOR_TYPE
 

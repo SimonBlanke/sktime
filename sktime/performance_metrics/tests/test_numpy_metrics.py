@@ -3,9 +3,9 @@
 from inspect import getmembers, isfunction
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.performance_metrics.forecasting import _functions
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.utils._testing.series import _make_series

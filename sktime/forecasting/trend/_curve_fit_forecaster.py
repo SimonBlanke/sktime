@@ -5,9 +5,9 @@
 __author__ = ["benheid"]
 __all__ = ["CurveFitForecaster"]
 
-import pandas as pd
 from scipy.optimize import curve_fit
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.forecasting.trend._util import _get_X_numpy_int_from_pandas
 

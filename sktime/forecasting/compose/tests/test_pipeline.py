@@ -6,11 +6,11 @@ __author__ = ["mloning", "fkiraly"]
 __all__ = []
 
 import numpy as np
-import pandas as pd
 import pytest
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.svm import SVR
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley
 from sktime.datatypes import get_examples
 from sktime.datatypes._utilities import get_window

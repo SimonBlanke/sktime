@@ -1,9 +1,9 @@
 """Test single problem loaders using data shipping with sktime."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import (
     load_acsf1,
     load_arrow_head,

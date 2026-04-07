@@ -1,6 +1,6 @@
 """Utilities to handle checks and conversions between output formats of detectors."""
 
-import pandas as pd
+from sktime import pandapter as pd
 
 
 def _get_example_segments_0():

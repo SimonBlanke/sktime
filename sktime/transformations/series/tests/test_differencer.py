@@ -6,9 +6,9 @@ __author__ = ["RNKuhns", "fkiraly", "ilkersigirci"]
 __all__ = []
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.difference import Differencer

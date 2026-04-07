@@ -4,8 +4,7 @@ from inspect import isclass
 from itertools import product
 from timeit import default_timer as timer
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.utils._testing.panel import make_classification_problem
 
 

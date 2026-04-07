@@ -5,13 +5,13 @@
 __author__ = ["Lovkush-A", "mloning", "LuisZugasti", "AyushmaanSeth"]
 
 import numpy as np
-import pandas as pd
 import pytest
 from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.dummy import DummyRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.compose import (

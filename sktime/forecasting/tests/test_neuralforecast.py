@@ -1,9 +1,9 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 """Tests for interfacing estimators from neuralforecast."""
 
-import pandas
 import pytest
 
+from sktime import pandapter as pandas
 from sktime.datasets import load_longley
 from sktime.forecasting.neuralforecast import (
     NeuralForecastDilatedRNN,

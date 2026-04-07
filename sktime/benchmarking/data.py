@@ -5,8 +5,7 @@ __author__ = ["viktorkaz", "mloning"]
 
 import os
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.benchmarking.base import BaseDataset, HDDBaseDataset
 from sktime.datasets import load_from_tsfile_to_dataframe
 

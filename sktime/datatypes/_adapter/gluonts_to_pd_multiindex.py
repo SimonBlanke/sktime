@@ -16,8 +16,7 @@ def convert_gluonts_result_to_multiindex(gluonts_result):
     -------
     A MultiIndex DF mtype type compatible with sktime.
     """
-    import pandas as pd
-
+    from sktime import pandapter as pd
     from sktime.datatypes import convert_to
 
     instance_no = len(gluonts_result)

@@ -1,7 +1,7 @@
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes._adapter.gluonts import (
     convert_pandas_collection_to_pandasDataset,
     convert_pandas_dataframe_to_pandasDataset,

@@ -6,8 +6,7 @@ __author__ = ["fkiraly", "mloning"]
 
 __all__ = ["ColumnEnsembleTransformer", "ColumnwiseTransformer"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base._meta import _ColumnEstimator, _HeterogenousMetaEstimator
 from sktime.transformations.base import BaseTransformer
 from sktime.utils._estimator_html_repr import _VisualBlock

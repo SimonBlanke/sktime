@@ -5,9 +5,9 @@
 __author__ = ["fkiraly", "ngupta23"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.tbats import TBATS
 from sktime.tests.test_switch import run_test_for_class
 

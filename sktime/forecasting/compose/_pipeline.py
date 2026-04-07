@@ -4,8 +4,7 @@
 __all__ = ["TransformedTargetForecaster", "ForecastingPipeline", "ForecastX"]
 
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import _HeterogenousMetaEstimator
 from sktime.datatypes import ALL_TIME_SERIES_MTYPES
 from sktime.forecasting.base._base import BaseForecaster

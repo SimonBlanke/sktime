@@ -9,8 +9,7 @@ __all__ = ["scenarios_transformers_pairwise", "scenarios_transformers_pairwise_p
 
 from inspect import isclass
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import BaseObject
 from sktime.datatypes import convert_to
 from sktime.utils._testing.panel import make_transformer_problem

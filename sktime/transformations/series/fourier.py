@@ -6,9 +6,9 @@ __author__ = ["ltsaprounis", "blazingbhavneek"]
 import warnings
 
 import numpy as np
-import pandas as pd
 from numpy.fft import rfft
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

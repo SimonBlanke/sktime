@@ -5,10 +5,10 @@
 import warnings
 
 import numpy as np
-import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley, load_PBS_dataset
 from sktime.split import temporal_train_test_split
 from sktime.tests.test_switch import run_test_for_class

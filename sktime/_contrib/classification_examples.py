@@ -6,7 +6,7 @@ This will become a note book once complete.
 __author__ = ["TonyBagnall"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.ensemble import RandomForestClassifier
 
 from sktime.classification.dictionary_based import ContractableBOSS

@@ -6,8 +6,8 @@ __author__ = ["khrapovs", "mloning", "hazrulakmal"]
 
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_index_for_series
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.split.base import BaseSplitter

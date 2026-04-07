@@ -5,9 +5,9 @@
 __author__ = ["mloning"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.base._sktime import _BaseWindowForecaster
 from sktime.forecasting.naive import NaiveForecaster
 from sktime.registry import all_estimators

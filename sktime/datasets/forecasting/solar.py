@@ -1,7 +1,6 @@
 """Solar dataset for time series forecasting."""
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets._single_problem_loaders import load_solar
 from sktime.datasets.forecasting._base import _ForecastingDatasetFromLoader
 

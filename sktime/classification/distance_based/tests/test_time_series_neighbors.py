@@ -1,9 +1,9 @@
 """Tests for KNeighborsTimeSeriesClassifier."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.alignment.dtw_python import AlignerDTW
 from sktime.classification.distance_based._time_series_neighbors import (
     KNeighborsTimeSeriesClassifier,

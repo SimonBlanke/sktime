@@ -2,8 +2,8 @@
 """Feature transformer that returns features of time series including categories."""
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 __author__ = ["shlok191"]

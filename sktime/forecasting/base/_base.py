@@ -40,8 +40,8 @@ from copy import deepcopy
 from itertools import product
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.base._proba import _PredictProbaMixin
 from sktime.datatypes import (
@@ -548,7 +548,9 @@ class BaseForecaster(_PredictProbaMixin, BaseEstimator):
             store_behaviour="freeze",
         )
 
-        return y_out
+        from sktime.pandapter import ensure_native
+
+        return ensure_native(y_out)
 
     def fit_predict(self, y, X=None, fh=None, X_pred=None):
         """Fit and forecast time series at future horizon.
@@ -2035,6 +2037,11 @@ class BaseForecaster(_PredictProbaMixin, BaseEstimator):
             else:
                 X_inner = None
 
+        from sktime.pandapter import ensure_compat
+
+        X_inner = ensure_compat(X_inner)
+        y_inner = ensure_compat(y_inner)
+
         return X_inner, y_inner
 
     def _check_X(self, X=None):
@@ -2805,7 +2812,9 @@ class _BaseGlobalForecaster(BaseForecaster):
             store_behaviour="freeze",
         )
 
-        return y_out
+        from sktime.pandapter import ensure_native
+
+        return ensure_native(y_out)
 
     def _predict(self, fh, X, y):
         """Forecast time series at future horizon.

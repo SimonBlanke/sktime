@@ -22,9 +22,9 @@ __author__ = [
 __all__ = ["TotoForecaster"]
 
 import numpy as np
-import pandas as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.singleton import _multiton
 

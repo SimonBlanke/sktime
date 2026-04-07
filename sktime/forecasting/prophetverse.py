@@ -4,8 +4,7 @@
 __author__ = ["felipeangelimvieira"]  # fkiraly for adapter
 
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base._delegate import _DelegatedForecaster
 from sktime.utils.dependencies import _placeholder_record
 

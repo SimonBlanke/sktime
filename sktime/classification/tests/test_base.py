@@ -5,10 +5,10 @@ __author__ = ["mloning", "fkiraly", "TonyBagnall", "MatthewMiddlehurst", "achiev
 import pickle
 
 import numpy as np
-import pandas as pd
 import pytest
 from sklearn.model_selection import KFold
 
+from sktime import pandapter as pd
 from sktime.classification.base import BaseClassifier
 from sktime.classification.deep_learning.base import BaseDeepClassifier
 from sktime.classification.distance_based import KNeighborsTimeSeriesClassifier

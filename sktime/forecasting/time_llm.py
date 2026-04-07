@@ -6,8 +6,7 @@ __author__ = ["KimMeen", "jgyasu"]
 
 from types import SimpleNamespace
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.dependencies import _safe_import
 from sktime.utils.singleton import _multiton

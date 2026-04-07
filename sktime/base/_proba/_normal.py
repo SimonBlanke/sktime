@@ -4,9 +4,9 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
 from scipy.special import erf, erfinv
 
+from sktime import pandapter as pd
 from sktime.base._proba._base import BaseDistribution
 
 

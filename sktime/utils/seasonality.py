@@ -9,8 +9,8 @@ __all__ = []
 from warnings import warn
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.utils.dependencies import _check_soft_dependencies
 from sktime.utils.validation.forecasting import check_sp, check_y
 

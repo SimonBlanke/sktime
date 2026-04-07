@@ -5,10 +5,10 @@
 __author__ = ["ciaran-g"]
 
 import numpy as np
-import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.exp_smoothing import ExponentialSmoothing
 from sktime.forecasting.naive import NaiveForecaster

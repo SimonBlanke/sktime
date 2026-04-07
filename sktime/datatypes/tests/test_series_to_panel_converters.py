@@ -1,9 +1,9 @@
 """Testing panel converters - internal functions and more extensive fixtures."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes._series_as_panel import (
     convert_Panel_to_Series,
     convert_Series_to_Panel,

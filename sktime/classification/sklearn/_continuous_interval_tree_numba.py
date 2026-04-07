@@ -9,8 +9,8 @@ __author__ = ["MatthewMiddlehurst"]
 import math
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.utils.numba.njit import njit
 from sktime.utils.numba.stats import iqr, mean, numba_max, numba_min, slope, std
 

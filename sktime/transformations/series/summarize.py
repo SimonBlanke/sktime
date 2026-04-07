@@ -5,8 +5,7 @@
 __author__ = ["mloning", "RNKuhns", "danbartl", "grzegorzrut", "BensHamza"]
 __all__ = ["SummaryTransformer", "WindowSummarizer", "SplitterSummarizer"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.split import ExpandingWindowSplitter, SlidingWindowSplitter
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.multiindex import flatten_multiindex

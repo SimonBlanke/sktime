@@ -2,7 +2,8 @@
 """Eclectic utilities for the datatypes module."""
 
 import numpy as np
-import pandas as pd
+
+from sktime import pandapter as pd
 
 
 def _get_index(x):
@@ -309,7 +310,7 @@ def get_cutoff(
 
     # pd-multiindex (Panel) and pd_multiindex_hier (Hierarchical)
     if isinstance(obj, pd.DataFrame) and isinstance(obj.index, pd.MultiIndex):
-        from pandas.core.indexes.base import ensure_index
+        from sktime.compat.pandas import ensure_index
 
         inst_levels = list(range(obj.index.nlevels - 1))
         cutoff = (

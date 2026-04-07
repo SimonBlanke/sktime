@@ -5,10 +5,9 @@ __author__ = ["MBristle"]
 
 import logging
 
-import pandas as pd
-from pandas.api.types import is_integer_dtype
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster, ForecastingHorizon
+from sktime.pandapter.api.types import is_integer_dtype
 
 
 class AutoTS(BaseForecaster):
@@ -684,7 +683,7 @@ class AutoTS(BaseForecaster):
             2. "lower"/"upper"
             Row index is fh.
         """
-        import pandas as pd
+        from sktime import pandapter as pd
 
         # Prepare coverage list for AutoTS
         # AutoTS supports a list of floats for prediction_interval

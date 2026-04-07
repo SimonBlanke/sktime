@@ -1,6 +1,6 @@
 """Tests for dummy detectors."""
 
-import pandas as pd
+from sktime import pandapter as pd
 
 
 def test_dummy_changepoints():

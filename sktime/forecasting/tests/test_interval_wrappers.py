@@ -4,9 +4,9 @@
 __author__ = ["fkiraly", "bethrice44"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.datatypes import convert_to, scitype_to_mtype
 from sktime.forecasting.conformal import ConformalIntervals

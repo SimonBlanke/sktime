@@ -1,9 +1,9 @@
 """Tests for classes in forecasting module."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.performance_metrics.forecasting import (
     MeanSquaredError,

@@ -10,9 +10,9 @@ __all__ = [
 ]
 
 import numpy as np
-import pandas as pd
 from sklearn.utils.validation import check_random_state
 
+from sktime import pandapter as pd
 from sktime.datatypes import convert
 
 

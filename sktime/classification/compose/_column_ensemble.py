@@ -9,9 +9,9 @@ __all__ = ["ColumnEnsembleClassifier"]
 from itertools import chain
 
 import numpy as np
-import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
+from sktime import pandapter as pd
 from sktime.base import _HeterogenousMetaEstimator
 from sktime.classification.base import BaseClassifier
 

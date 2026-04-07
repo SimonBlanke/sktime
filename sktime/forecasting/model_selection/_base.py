@@ -1,9 +1,9 @@
 """Base class for forecasting tuners."""
 
 import numpy as np
-import pandas as pd
 from sklearn.model_selection import check_cv
 
+from sktime import pandapter as pd
 from sktime.datatypes import mtype_to_scitype
 from sktime.exceptions import NotFittedError
 from sktime.forecasting.base._delegate import _DelegatedForecaster

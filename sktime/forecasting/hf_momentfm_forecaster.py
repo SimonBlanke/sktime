@@ -3,8 +3,8 @@
 import warnings
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon, _BaseGlobalForecaster
 from sktime.split import temporal_train_test_split
 from sktime.utils.dependencies import _safe_import

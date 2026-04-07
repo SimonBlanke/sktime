@@ -3,9 +3,9 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes import update_data
 from sktime.datatypes._check import check_is_mtype
 from sktime.datatypes._examples import get_examples

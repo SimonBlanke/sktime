@@ -4,8 +4,7 @@
 
 __author__ = ["sbuse"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base._base import DEFAULT_ALPHA
 from sktime.forecasting.base.adapters import _ProphetAdapter
 

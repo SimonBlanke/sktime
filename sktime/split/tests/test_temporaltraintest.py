@@ -2,9 +2,9 @@
 """Tests for temporal train test splitter."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.datatypes._utilities import get_cutoff
 from sktime.forecasting.tests._config import TEST_OOS_FHS, VALID_INDEX_FH_COMBINATIONS

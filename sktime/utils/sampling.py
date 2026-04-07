@@ -6,8 +6,9 @@ Used in experiments to get deterministic resamples.
 import random
 
 import numpy as np
-import pandas as pd
 import sklearn.utils
+
+from sktime import pandapter as pd
 
 
 def stratified_resample(X_train, y_train, X_test, y_test, random_state):

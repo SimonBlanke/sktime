@@ -18,10 +18,10 @@ __author__ = ["mloning", "big-o", "khrapovs"]
 from datetime import timedelta
 
 import numpy as np
-import pandas as pd
 from sklearn.base import clone, is_regressor
 from sklearn.ensemble import GradientBoostingRegressor
 
+from sktime import pandapter as pd
 from sktime.utils.validation import (
     array_is_datetime64,
     array_is_int,

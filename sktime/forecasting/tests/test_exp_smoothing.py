@@ -3,10 +3,10 @@
 __author__ = ["mloning", "big-o", "ciaran-g"]
 __all__ = ["test_set_params"]
 
-import pandas as pd
 import pytest
 from numpy.testing import assert_array_equal
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.forecasting.exp_smoothing import ExponentialSmoothing
 from sktime.split import temporal_train_test_split

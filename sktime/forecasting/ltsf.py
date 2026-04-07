@@ -1,7 +1,6 @@
 """Deep Learning Forecasters using LTSF-Linear Models."""
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.base.adapters._pytorch import BaseDeepNetworkPyTorch
 from sktime.utils.warnings import warn

@@ -5,8 +5,7 @@ __author__ = ["AzulGarza"]
 __all__ = ["_StatsForecastAdapter"]
 
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.forecasting.base._base import DEFAULT_ALPHA
 

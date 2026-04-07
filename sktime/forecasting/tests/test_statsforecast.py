@@ -6,9 +6,9 @@
 from unittest.mock import patch
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.statsforecast import StatsForecastAutoCES, StatsForecastMSTL
 from sktime.tests.test_switch import run_test_for_class

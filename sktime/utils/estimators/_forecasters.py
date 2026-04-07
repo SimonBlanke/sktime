@@ -1,7 +1,6 @@
 __author__ = ["ltsaprounis"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.estimators._base import _method_logger, _MockEstimatorMixin
 

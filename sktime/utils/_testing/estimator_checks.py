@@ -8,10 +8,10 @@ __author__ = ["mloning", "fkiraly"]
 from inspect import isclass, signature
 
 import numpy as np
-import pandas as pd
 from pandas.testing import assert_frame_equal
 from sklearn.utils.validation import check_random_state
 
+from sktime import pandapter as pd
 from sktime.classification.base import BaseClassifier
 from sktime.classification.early_classification import BaseEarlyClassifier
 from sktime.clustering.base import BaseClusterer

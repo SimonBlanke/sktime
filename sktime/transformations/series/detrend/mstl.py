@@ -6,8 +6,7 @@ __authors__ = ["luca-miniati"]
 
 from collections.abc import Sequence
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

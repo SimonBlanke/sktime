@@ -1,9 +1,9 @@
 """Testing multiindex utilities."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.utils.multiindex import (
     apply_split,

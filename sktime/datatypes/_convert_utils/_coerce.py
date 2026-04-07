@@ -2,7 +2,7 @@
 
 __author__ = ["fkiraly"]
 
-import pandas as pd
+from sktime import pandapter as pd
 
 
 def _is_nullable_numeric(dtype):

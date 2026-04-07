@@ -15,7 +15,6 @@
 """time_features."""
 
 import numpy as np
-import pandas as pd
 from pandas.tseries.holiday import (
     SU,
     TH,
@@ -31,6 +30,8 @@ from pandas.tseries.holiday import (
 )
 from pandas.tseries.offsets import DateOffset, Day, Easter
 from sklearn.preprocessing import StandardScaler
+
+from sktime import pandapter as pd
 
 # avoid another dependency
 # from tqdm import tqdm

@@ -1,8 +1,8 @@
 """Tests for the directed Hausdorff distance."""
 
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.performance_metrics.detection._hausdorff import DirectedHausdorff
 from sktime.tests.test_switch import run_test_for_class
 

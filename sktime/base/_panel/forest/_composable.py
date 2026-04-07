@@ -9,7 +9,6 @@ from abc import abstractmethod
 from warnings import catch_warnings, simplefilter
 
 import numpy as np
-import pandas as pd
 from numpy import float64 as DOUBLE
 from sklearn.base import clone
 from sklearn.ensemble._forest import (
@@ -21,6 +20,7 @@ from sklearn.ensemble._forest import (
 from sklearn.exceptions import DataConversionWarning
 from sklearn.utils import check_array, check_random_state, compute_sample_weight
 
+from sktime import pandapter as pd
 from sktime.utils.random_state import set_random_state
 from sktime.utils.warnings import warn
 

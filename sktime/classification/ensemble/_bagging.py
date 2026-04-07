@@ -6,8 +6,8 @@ __all__ = ["BaggingClassifier"]
 from math import ceil
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.classification.base import BaseClassifier
 
 

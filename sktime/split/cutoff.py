@@ -11,9 +11,9 @@ __all__ = [
 
 
 import numpy as np
-import pandas as pd
-from pandas.api.types import is_datetime64_any_dtype
 
+from sktime import pandapter as pd
+from sktime.pandapter.api.types import is_datetime64_any_dtype
 from sktime.split.base import BaseSplitter
 from sktime.split.base._common import (
     ACCEPTED_Y_TYPES,

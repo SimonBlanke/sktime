@@ -2,9 +2,9 @@
 """Tests for cutoff splitter."""
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.tests._config import (
     TEST_CUTOFFS,

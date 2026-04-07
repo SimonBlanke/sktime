@@ -10,8 +10,8 @@ __all__ = [
 
 
 import numpy as np
-import pandas as pd
 
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_index_for_series
 from sktime.split.base import BaseSplitter
 from sktime.split.base._common import (

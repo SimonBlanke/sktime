@@ -6,9 +6,10 @@ points and quantify the error.
 
 import numpy as np
 import numpy.typing as npt
-import pandas as pd
 from scipy.spatial.distance import directed_hausdorff
 from sklearn.utils import check_array
+
+from sktime import pandapter as pd
 
 __author__ = ["lmmentel"]
 

@@ -6,9 +6,9 @@ __all__ = []
 
 
 import numpy as np
-import pandas as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_basic_motions, load_UCR_UEA_dataset, load_uschange
 from sktime.datasets._data_io import _list_available_datasets, _load_provided_dataset
 from sktime.datatypes import check_is_mtype, scitype_to_mtype

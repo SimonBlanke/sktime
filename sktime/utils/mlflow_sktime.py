@@ -46,9 +46,8 @@ __all__ = [
 import logging
 import os
 
-import pandas as pd
-
 import sktime
+from sktime import pandapter as pd
 from sktime import utils
 from sktime.base._serialize import load
 from sktime.utils.dependencies import _check_mlflow_dependencies

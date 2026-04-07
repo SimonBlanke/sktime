@@ -12,8 +12,7 @@ __author__ = ["ken_maeda"]
 __all__ = ["HPFilter"]
 
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 
