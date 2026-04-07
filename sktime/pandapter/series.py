@@ -21,6 +21,10 @@ class CompatSeries(_pd.Series, metaclass=_CompatSeriesMeta):
 
     __module__ = _pd.Series.__module__
 
+    def __reduce__(self):
+        """Serialize as a plain pd.Series so pickle works without pandapter."""
+        return (_pd.Series, (), self.__getstate__())
+
     @property
     def _constructor(self):
         return CompatSeries

@@ -34,6 +34,10 @@ class CompatDataFrame(_pd.DataFrame, metaclass=_CompatDataFrameMeta):
     # are rejected because their module would be "sktime.pandapter.frame".
     __module__ = _pd.DataFrame.__module__
 
+    def __reduce__(self):
+        """Serialize as a plain pd.DataFrame so pickle works without pandapter."""
+        return (_pd.DataFrame, (), self.__getstate__())
+
     @property
     def _constructor(self):
         return CompatDataFrame
