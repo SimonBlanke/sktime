@@ -11,8 +11,7 @@ __all__ = [
 
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 # We currently support the following types for input data and time index types.
 VALID_DATA_TYPES = (pd.DataFrame, pd.Series, np.ndarray)
 VALID_INDEX_TYPES = (pd.RangeIndex, pd.PeriodIndex, pd.DatetimeIndex, pd.TimedeltaIndex)

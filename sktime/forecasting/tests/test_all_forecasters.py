@@ -8,7 +8,7 @@ import re
 from inspect import signature
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datatypes import check_is_mtype

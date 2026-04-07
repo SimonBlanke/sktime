@@ -2,7 +2,7 @@
 """Parameter search via scikit-optimize."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.model_selection import check_cv
 
 from sktime.exceptions import NotFittedError

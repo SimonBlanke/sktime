@@ -11,7 +11,7 @@ import multiprocessing
 import sys
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.feature_selection import chi2, f_classif
 from sklearn.preprocessing import KBinsDiscretizer
 from sklearn.tree import DecisionTreeClassifier

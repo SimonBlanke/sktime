@@ -9,8 +9,7 @@ __author__ = ["klam-data", "pyyim", "mgorlin"]
 __all__ = ["BKFilter"]
 
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

@@ -3,8 +3,7 @@
 
 import warnings
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base._base import BaseForecaster
 from sktime.forecasting.base.adapters import _StatsModelsAdapter
 from sktime.forecasting.base.adapters._statsmodels import _coerce_int_to_range_index

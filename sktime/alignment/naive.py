@@ -2,8 +2,7 @@
 """Naive aligners, aligning starts/ends."""
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.alignment.base import BaseAligner
 
 

@@ -6,7 +6,7 @@ __author__ = ["mloning", "fkiraly"]
 __all__ = []
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.svm import SVR

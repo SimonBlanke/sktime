@@ -1,4 +1,4 @@
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.tests.test_switch import run_test_module_changed

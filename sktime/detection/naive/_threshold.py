@@ -1,7 +1,6 @@
 """Naive thresholding detector."""
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 from sktime.detection.utils._arr_to_seg import sparse_pts_to_seg
 from sktime.detection.utils._seg_middle import seg_middlepoint

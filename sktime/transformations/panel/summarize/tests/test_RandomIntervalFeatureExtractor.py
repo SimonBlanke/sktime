@@ -1,7 +1,7 @@
 """Tests for RIFE."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer

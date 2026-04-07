@@ -5,7 +5,7 @@ __author__ = ["mloning", "TonyBagnall"]
 __all__ = ["test_check_X_bad_input_args"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.tests.test_switch import run_test_for_class

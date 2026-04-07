@@ -8,8 +8,7 @@ import warnings
 from functools import singledispatch
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes import VectorizedDF
 from sktime.datatypes._utilities import get_time_index
 from sktime.utils.validation.series import check_time_index, is_integer_index

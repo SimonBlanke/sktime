@@ -3,8 +3,7 @@
 
 import abc
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster, ForecastingHorizon
 from sktime.utils.dependencies import _check_soft_dependencies
 from sktime.utils.warnings import warn
@@ -365,7 +364,7 @@ class _DartsRegressionAdapter(BaseForecaster):
 
         if _is_int64_type(expected_index):
             if X is not None:
-                from pandas.core.indexes.numeric import Int64Index
+                # Int64Index removed in pandas 2.0, use pd.Index with dtype check
 
                 endogenous_point_predictions.index = Int64Index(
                     endogenous_point_predictions.index
@@ -687,7 +686,7 @@ def _is_int64_type(index: pd.Index) -> bool:
         True if the index is numeric, False otherwise
     """
     try:
-        from pandas.core.indexes.numeric import Int64Index
+        # Int64Index removed in pandas 2.0, use pd.Index with dtype check
 
         return isinstance(index, Int64Index)
     except ImportError:

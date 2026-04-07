@@ -18,7 +18,7 @@ __author__ = ["mloning", "big-o", "khrapovs"]
 from datetime import timedelta
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone, is_regressor
 from sklearn.ensemble import GradientBoostingRegressor
 

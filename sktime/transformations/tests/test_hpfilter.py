@@ -2,7 +2,7 @@
 
 __author__ = ["ken-maeda"]
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from numpy import array_equal
 

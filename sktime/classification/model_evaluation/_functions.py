@@ -11,8 +11,7 @@ import time
 import warnings
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes import check_is_scitype, convert
 from sktime.exceptions import FitFailedWarning
 from sktime.utils.dependencies import _check_soft_dependencies

@@ -11,7 +11,7 @@ from copy import deepcopy
 from inspect import getfullargspec, isfunction, signature
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.utils import check_array
 
 from sktime.datatypes import VectorizedDF, check_is_scitype, convert_to

@@ -6,7 +6,7 @@ __author__ = ["mloning", "fkiraly"]
 __all__ = ["get_expected_polynomial_coefs"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datasets import load_airline

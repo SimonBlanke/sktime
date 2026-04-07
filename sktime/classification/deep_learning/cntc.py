@@ -220,7 +220,7 @@ class CNTCClassifier(BaseDeepClassifier):
             The input to be fed to the two arms of CNTC.
         """
         import numpy as np
-        import pandas as pd
+        from sktime import pandapter as pd
         from tensorflow import keras
 
         if X.shape[2] == 1:

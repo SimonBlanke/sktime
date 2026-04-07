@@ -14,7 +14,7 @@ from inspect import getfullargspec, isclass, signature
 from tempfile import TemporaryDirectory
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.base import BaseEstimator, BaseObject, load

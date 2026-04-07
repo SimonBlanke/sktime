@@ -5,8 +5,7 @@
 from collections.abc import Iterator
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_window
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.base._fh import VALID_FORECASTING_HORIZON_TYPES

@@ -35,8 +35,8 @@ metadata: dict - metadata about obj if valid, otherwise None
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
-from pandas.api.types import is_numeric_dtype
+from sktime import pandapter as pd
+from sktime.pandapter.api.types import is_numeric_dtype
 
 from sktime.datatypes._base._common import _req
 from sktime.datatypes._base._common import _ret as ret

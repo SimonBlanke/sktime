@@ -10,8 +10,7 @@ from collections import defaultdict
 from datetime import date
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.dependencies import _check_soft_dependencies
 from sktime.utils.warnings import warn

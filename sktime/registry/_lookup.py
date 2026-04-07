@@ -19,7 +19,7 @@ from inspect import isclass
 from operator import itemgetter
 from pathlib import Path
 
-import pandas as pd
+from sktime import pandapter as pd
 from skbase.lookup import all_objects
 
 from sktime.base import BaseObject

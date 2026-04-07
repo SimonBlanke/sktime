@@ -7,7 +7,7 @@ __author__ = ["fkiraly", "tpvasconcelos"]
 
 from unittest import mock
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.forecasting.fbprophet import Prophet

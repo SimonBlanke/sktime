@@ -23,8 +23,7 @@ Types of tests that can be performed with these examples:
 """
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._base import BaseExample
 from sktime.datatypes._dtypekind import DtypeKind
 

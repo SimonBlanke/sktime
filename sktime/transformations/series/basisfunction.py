@@ -3,8 +3,7 @@
 __author__ = ["phoeenniixx"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.networks.rbf import RBFLayer
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.warnings import warn

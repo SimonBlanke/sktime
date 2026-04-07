@@ -4,8 +4,7 @@ import logging
 import warnings
 from dataclasses import dataclass, field
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.benchmarking._benchmarking_dataclasses import (
     ResultObject,

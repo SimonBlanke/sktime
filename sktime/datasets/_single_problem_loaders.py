@@ -47,8 +47,7 @@ from urllib.error import HTTPError, URLError
 from warnings import warn
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets._data_io import (
     _list_available_datasets,
     _load_dataset,

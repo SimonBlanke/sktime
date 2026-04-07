@@ -10,7 +10,7 @@ import time
 from itertools import product
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import (
     GridSearchCV,

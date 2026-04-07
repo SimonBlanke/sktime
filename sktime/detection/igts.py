@@ -19,8 +19,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 import numpy.typing as npt
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.utils.dependencies import _check_estimator_deps
 

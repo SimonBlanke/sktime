@@ -1,4 +1,4 @@
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.preprocessing import OneHotEncoder
 
 from sktime.regression.distance_based import KNeighborsTimeSeriesRegressor

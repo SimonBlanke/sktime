@@ -10,8 +10,7 @@ __author__ = ["fkiraly", "hoesler"]
 import itertools
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._check import check_is_scitype, mtype
 from sktime.datatypes._convert import convert_to
 from sktime.utils.multiindex import flatten_multiindex

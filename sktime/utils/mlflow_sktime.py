@@ -46,8 +46,7 @@ __all__ = [
 import logging
 import os
 
-import pandas as pd
-
+from sktime import pandapter as pd
 import sktime
 from sktime import utils
 from sktime.base._serialize import load

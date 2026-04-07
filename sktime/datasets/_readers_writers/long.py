@@ -3,8 +3,7 @@
 __author__ = ["TonyBagnall", "AidenRushbrooke", "Markus Löning"]
 __all__ = ["load_from_long_to_dataframe"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets._readers_writers.utils import get_path
 from sktime.datatypes._panel._convert import from_long_to_nested
 

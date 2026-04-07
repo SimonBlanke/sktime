@@ -4,7 +4,7 @@
 
 __author__ = ["mloning", "GuzalBulatova", "aiwalter", "RNKuhns", "AnH0ang"]
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor

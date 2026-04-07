@@ -6,8 +6,7 @@ __author__ = ["mloning", "big-o", "fkiraly"]
 __all__ = ["_BaseWindowForecaster"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base._base import BaseForecaster
 from sktime.split import CutoffSplitter
 from sktime.utils.datetime import _shift

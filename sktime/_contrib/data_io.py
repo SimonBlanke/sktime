@@ -10,8 +10,7 @@ __author__ = [
 ]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._panel._convert import (
     from_nested_to_2d_np_array,
     from_nested_to_3d_numpy,

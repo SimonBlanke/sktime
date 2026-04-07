@@ -6,7 +6,7 @@ __all__ = ["Evaluator"]
 import itertools
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from scipy import stats
 from scipy.stats import ranksums, ttest_ind
 

@@ -41,8 +41,7 @@ check_tag_is_valid(tag_name, tag_value) - checks whether tag_value is valid for 
 import inspect
 import sys
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import BaseObject
 from sktime.registry._base_classes import get_obj_scitype_list
 

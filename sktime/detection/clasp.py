@@ -19,8 +19,7 @@ __all__ = ["ClaSPSegmentation", "find_dominant_window_sizes"]
 from queue import PriorityQueue
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.series.clasp import ClaSPTransformer
 from sktime.utils.validation.series import check_series
 

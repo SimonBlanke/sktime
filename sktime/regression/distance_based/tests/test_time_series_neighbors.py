@@ -1,7 +1,7 @@
 """Tests for KNeighborsTimeSeriesRegressor."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.regression.distance_based._time_series_neighbors import (

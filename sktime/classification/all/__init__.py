@@ -3,8 +3,7 @@
 __author__ = ["mloning", "fkiraly"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets import (
     load_arrow_head,
     load_basic_motions,

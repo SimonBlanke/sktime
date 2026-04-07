@@ -10,7 +10,7 @@ __all__ = ["ColumnTransformer", "ColumnConcatenator"]
 from warnings import warn
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.compose import ColumnTransformer as _ColumnTransformer
 
 from sktime.transformations.base import BaseTransformer, _PanelToPanelTransformer

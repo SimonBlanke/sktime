@@ -1,6 +1,6 @@
 """Tests for the directed Chamfer distance."""
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.performance_metrics.detection._chamfer import DirectedChamfer

@@ -33,8 +33,7 @@ metadata: dict - metadata about obj if valid, otherwise None
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._alignment._base import ScitypeAlignment
 from sktime.datatypes._base._common import _req, _ret
 

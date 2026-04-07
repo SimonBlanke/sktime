@@ -6,7 +6,7 @@ Used in experiments to get deterministic resamples.
 import random
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import sklearn.utils
 
 

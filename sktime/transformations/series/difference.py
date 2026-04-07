@@ -7,7 +7,7 @@ __all__ = ["Differencer"]
 
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.utils import check_array
 
 from sktime.datatypes._utilities import get_cutoff, update_data

@@ -4,7 +4,7 @@
 __author__ = ["fkiraly"]
 __all__ = []
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.preprocessing import StandardScaler
 

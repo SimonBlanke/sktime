@@ -4,7 +4,7 @@
 
 __author__ = ["sanskarmodi8"]
 
-import pandas as pd
+from sktime import pandapter as pd
 from scipy.special import inv_boxcox
 
 from sktime.forecasting.base import BaseForecaster

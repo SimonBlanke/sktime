@@ -2,7 +2,7 @@
 
 __author__ = ["thayeylolu"]
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from numpy.testing import assert_allclose
 

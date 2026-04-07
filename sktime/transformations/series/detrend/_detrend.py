@@ -5,8 +5,7 @@
 __all__ = ["Detrender"]
 __author__ = ["mloning", "SveaMeyer13", "KishManani", "fkiraly"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes import update_data
 from sktime.forecasting.base._fh import ForecastingHorizon
 from sktime.forecasting.trend import PolynomialTrendForecaster

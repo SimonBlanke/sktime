@@ -8,8 +8,7 @@ from inspect import signature
 from typing import Literal
 
 import numpy as np
-import pandas
-
+from sktime import pandapter as pandas
 from sktime.forecasting.base import ForecastingHorizon, _BaseGlobalForecaster
 from sktime.utils.dependencies import _check_soft_dependencies
 from sktime.utils.warnings import warn

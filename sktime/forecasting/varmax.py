@@ -5,8 +5,7 @@ __author__ = ["KatieBuc"]
 
 import warnings
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base.adapters import _StatsModelsAdapter
 
 

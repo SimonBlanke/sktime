@@ -8,8 +8,8 @@ __all__ = ["ForecastingHorizon"]
 from functools import lru_cache
 
 import numpy as np
-import pandas as pd
-from pandas import Timedelta
+from sktime import pandapter as pd
+from sktime.pandapter import Timedelta
 from pandas.tseries.frequencies import to_offset
 
 from sktime.utils.datetime import _coerce_duration_to_int

@@ -5,7 +5,7 @@
 __author__ = ["tensorflow-as-tf", "mloning", "aiwalter", "fkiraly"]
 __all__ = ["TrendForecaster"]
 
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.linear_model import LinearRegression
 

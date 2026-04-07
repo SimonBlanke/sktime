@@ -9,7 +9,7 @@ Which is an easy way to turn a forecaster without exogenous capability into one 
 __all__ = ["ResidualBoostingForecaster"]
 __author__ = ["Sanchay117", "felipeangelimvieira"]
 
-import pandas as pd
+from sktime import pandapter as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 from sklearn.base import clone
 

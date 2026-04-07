@@ -3,7 +3,7 @@
 __author__ = ["mloning", "big-o", "ciaran-g"]
 __all__ = ["test_set_params"]
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from numpy.testing import assert_array_equal
 

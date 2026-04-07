@@ -3,7 +3,7 @@
 __author__ = ["mloning"]
 __all__ = []
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.utils._testing.forecasting import make_forecasting_problem

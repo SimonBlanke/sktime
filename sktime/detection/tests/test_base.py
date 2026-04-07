@@ -3,9 +3,9 @@
 __author__ = ["Alex-JG3"]
 __all__ = []
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
-from pandas import testing
+from sktime.pandapter import testing
 
 from sktime.detection.base import BaseDetector
 from sktime.tests.test_switch import run_test_for_class

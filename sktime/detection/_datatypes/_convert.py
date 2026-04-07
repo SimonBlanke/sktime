@@ -1,9 +1,7 @@
 """Utilities to handle checks and conversions between output formats of detectors."""
 
 import numpy as np
-import pandas as pd
-
-
+from sktime import pandapter as pd
 def _convert_points_to_segments(points_df, len_X=None, include_labels=False):
     """Convert points-like output to segments-like output.
 

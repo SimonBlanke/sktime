@@ -1,7 +1,7 @@
 """Tests for sample weight generators."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.performance_metrics.forecasting.sample_weight._base import (

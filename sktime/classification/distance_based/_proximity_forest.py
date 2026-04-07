@@ -12,7 +12,7 @@ __all__ = ["ProximityForest", "ProximityStump", "ProximityTree"]
 import math
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from joblib import Parallel, delayed
 from scipy import stats
 from sklearn.preprocessing import normalize

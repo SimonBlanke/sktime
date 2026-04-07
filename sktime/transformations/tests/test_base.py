@@ -14,7 +14,7 @@ __all__ = []
 from inspect import isclass
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datatypes import check_is_scitype, get_examples, mtype_to_scitype
@@ -755,8 +755,7 @@ def test_wrong_y_is_not_passed_to_transformer():
     from datetime import datetime
 
     import numpy as np
-    import pandas as pd
-
+    from sktime import pandapter as pd
     from sktime.pipeline import make_pipeline
     from sktime.regression.distance_based import KNeighborsTimeSeriesRegressor
     from sktime.transformations.compose import FitInTransform

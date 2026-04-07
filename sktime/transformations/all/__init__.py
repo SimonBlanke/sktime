@@ -3,8 +3,7 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.registry import all_estimators
 
 est_tuples = all_estimators(estimator_types="transformer", return_names=True)

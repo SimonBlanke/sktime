@@ -11,7 +11,7 @@ __all__ = [
 import os
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from joblib import Parallel, delayed
 
 from sktime.datasets._dataset_downloader import DatasetDownloader

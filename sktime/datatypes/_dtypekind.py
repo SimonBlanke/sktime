@@ -8,7 +8,7 @@ __author__ = ["Abhay-Lejith", "pranavvp16"]
 
 from enum import IntEnum
 
-from pandas.api.types import (
+from sktime.pandapter.api.types import (
     is_bool_dtype,
     is_datetime64_any_dtype,
     is_float_dtype,

@@ -7,8 +7,7 @@ __all__ = ["FeatureSelection"]
 
 import math
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.validation.forecasting import check_regressor
 

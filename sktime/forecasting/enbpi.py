@@ -2,7 +2,7 @@
 """Implements EnbPIForecaster."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.utils import check_random_state
 

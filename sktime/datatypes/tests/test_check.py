@@ -3,7 +3,7 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas
+from sktime import pandapter as pandas
 import pytest
 
 from sktime.datatypes._check import (

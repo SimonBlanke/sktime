@@ -6,7 +6,7 @@ __author__ = ["mloning", "khrapovs"]
 from datetime import timedelta
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from numpy.testing._private.utils import assert_array_equal
 from pytest import raises

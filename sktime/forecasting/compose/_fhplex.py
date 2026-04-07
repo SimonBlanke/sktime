@@ -6,8 +6,7 @@ from sktime.forecasting.base import BaseForecaster
 __author__ = ["fkiraly"]
 __all__ = ["FhPlexForecaster"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_slice
 
 PANDAS_TS_MTYPES = ["pd.DataFrame", "pd-multiindex", "pd_multiindex_hier"]

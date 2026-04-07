@@ -2,7 +2,7 @@
 """Tests for sliding greedy splitter."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.split import SlidingGreedySplitter

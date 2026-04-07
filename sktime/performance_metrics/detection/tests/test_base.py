@@ -1,6 +1,6 @@
 """Tests for base class boilerplate."""
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.detection._datatypes._examples import (

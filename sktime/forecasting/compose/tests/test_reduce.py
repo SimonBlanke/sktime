@@ -5,7 +5,7 @@
 __author__ = ["Lovkush-A", "mloning", "LuisZugasti", "AyushmaanSeth"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.dummy import DummyRegressor

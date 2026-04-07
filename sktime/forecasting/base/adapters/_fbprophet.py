@@ -7,8 +7,7 @@ __all__ = ["_ProphetAdapter"]
 
 import os
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 
 

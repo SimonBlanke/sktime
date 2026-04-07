@@ -1,7 +1,6 @@
 """Topdown reconciliation."""
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.hierarchical.reconcile._base import _ReconcilerTransformer
 from sktime.transformations.hierarchical.reconcile._utils import (
     _get_total_level_idxs,

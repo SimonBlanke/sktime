@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.forecasting.naive import NaiveForecaster

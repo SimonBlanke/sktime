@@ -4,7 +4,7 @@ Implementing segmentation using clustering, Read more at
 <https://en.wikipedia.org/wiki/Cluster_analysis>_.
 """
 
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.cluster import KMeans
 

@@ -6,8 +6,7 @@ __all__ = ["ForecastingData"]
 import warnings
 from inspect import signature
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets import load_forecastingdata
 from sktime.datasets.base._base import InvalidSetError
 from sktime.datasets.forecasting._base import BaseForecastingDataset

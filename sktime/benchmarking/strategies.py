@@ -3,7 +3,7 @@
 __all__ = ["TSCStrategy", "TSRStrategy"]
 __author__ = ["mloning", "sajaysurya"]
 
-import pandas as pd
+from sktime import pandapter as pd
 from joblib import dump, load
 from sklearn.base import ClassifierMixin, RegressorMixin
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV

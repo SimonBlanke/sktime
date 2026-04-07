@@ -10,7 +10,7 @@ __author__ = ["mloning", "GuzalBulatova", "aiwalter", "RNKuhns", "AnH0ang"]
 __all__ = ["EnsembleForecaster", "AutoEnsembleForecaster"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from scipy.stats import gmean
 from sklearn.pipeline import Pipeline
 

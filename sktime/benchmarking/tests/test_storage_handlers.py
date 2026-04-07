@@ -1,4 +1,4 @@
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.benchmarking._benchmarking_dataclasses import FoldResults, ResultObject

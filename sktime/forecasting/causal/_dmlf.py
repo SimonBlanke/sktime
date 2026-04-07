@@ -6,7 +6,7 @@ __author__ = ["geetu040", "XAheli"]
 
 import math
 
-import pandas as pd
+from sktime import pandapter as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 from sklearn.base import clone
 from sklearn.linear_model import LinearRegression

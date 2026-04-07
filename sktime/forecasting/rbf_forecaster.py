@@ -3,7 +3,7 @@
 __author__ = ["phoeenniixx"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.preprocessing import StandardScaler
 
 from sktime.forecasting.base.adapters._pytorch import BaseDeepNetworkPyTorch

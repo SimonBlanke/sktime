@@ -9,7 +9,7 @@ from abc import abstractmethod
 from warnings import catch_warnings, simplefilter
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from numpy import float64 as DOUBLE
 from sklearn.base import clone
 from sklearn.ensemble._forest import (

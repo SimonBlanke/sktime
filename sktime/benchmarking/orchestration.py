@@ -5,7 +5,7 @@ __author__ = ["viktorkaz", "mloning"]
 
 import logging
 
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 
 from sktime.benchmarking.tasks import TSCTask, TSRTask

@@ -3,8 +3,7 @@
 
 __author__ = ["fkiraly", "RobKuebler"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes import convert_to
 from sktime.forecasting.base import BaseForecaster
 

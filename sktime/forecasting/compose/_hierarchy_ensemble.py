@@ -5,8 +5,7 @@ __author__ = ["VyomkeshVyas"]
 __all__ = ["HierarchyEnsembleForecaster"]
 
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base._meta import flatten
 from sktime.forecasting.base._base import BaseForecaster
 from sktime.forecasting.base._meta import _HeterogenousEnsembleForecaster

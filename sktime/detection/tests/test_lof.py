@@ -4,7 +4,7 @@ __author__ = ["Alex-JG3"]
 
 import datetime
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.detection.lof import SubLOF

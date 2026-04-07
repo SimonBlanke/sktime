@@ -16,8 +16,7 @@ convert_Hierarchical_to_Panel(obj, store=None)
 __author__ = ["fkiraly"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes import convert_to, scitype
 
 

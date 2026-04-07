@@ -1,8 +1,7 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 """Implements compositors for performing forecasting by group."""
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base._meta import _HeterogenousMetaEstimator
 from sktime.datatypes import ALL_TIME_SERIES_MTYPES, mtype_to_scitype
 from sktime.forecasting.base import BaseForecaster

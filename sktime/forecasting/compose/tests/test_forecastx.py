@@ -8,7 +8,7 @@ __all__ = []
 from unittest import mock
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.svm import SVR
 

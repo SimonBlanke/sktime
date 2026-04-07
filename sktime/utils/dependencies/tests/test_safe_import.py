@@ -7,8 +7,7 @@ from sktime.utils.dependencies import _safe_import
 def test_safe_import_present():
     """Test that _safe_import returns a real module for installed package."""
     result = _safe_import("pandas")
-    import pandas
-
+    from sktime import pandapter as pandas
     assert result is pandas
 
 

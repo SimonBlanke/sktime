@@ -6,8 +6,7 @@ __all__ = ["XLSTMForecaster"]
 __author__ = ["muslehal", "vedantag17"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.dependencies import _check_soft_dependencies
 from sktime.utils.validation.forecasting import check_y

@@ -5,8 +5,7 @@
 __author__ = ["fkiraly", "mloning"]
 __all__ = ["FeatureUnion"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base._meta import _HeterogenousMetaEstimator
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.multiindex import flatten_multiindex

@@ -26,8 +26,7 @@ __author__ = ["fkiraly"]
 __all__ = ["infer_mtype_dict"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 #########################################################
 # methods to infer the machine type subject to a scitype
 #########################################################

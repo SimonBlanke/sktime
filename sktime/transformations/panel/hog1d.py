@@ -4,8 +4,7 @@ import math
 import numbers
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._panel._convert import from_nested_to_2d_array
 from sktime.transformations.base import BaseTransformer
 

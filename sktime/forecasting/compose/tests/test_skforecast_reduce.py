@@ -2,7 +2,7 @@
 
 __author__ = ["Abhay-Lejith", "yarnabrina"]
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from pandas.testing import assert_frame_equal, assert_series_equal
 

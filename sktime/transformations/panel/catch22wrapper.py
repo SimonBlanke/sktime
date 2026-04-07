@@ -7,8 +7,7 @@ __author__ = ["MatthewMiddlehurst", "fkiraly"]
 __all__ = ["Catch22Wrapper"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.transformations.panel import catch22
 

@@ -2,9 +2,7 @@
 """Output coercion utilities for metric classes."""
 
 import numpy as np
-import pandas as pd
-
-
+from sktime import pandapter as pd
 def _coerce_to_scalar(obj):
     """Coerce obj to scalar, from polymorphic input scalar or pandas."""
     if isinstance(obj, pd.DataFrame):

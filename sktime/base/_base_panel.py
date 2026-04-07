@@ -12,8 +12,7 @@ __all__ = ["BasePanelMixin"]
 
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.utils.warnings import warn
 
@@ -332,7 +331,10 @@ class BasePanelMixin(BaseEstimator):
             to_type=inner_type,
             as_scitype="Panel",
         )
-        return X
+
+        from sktime.pandapter import ensure_compat
+
+        return ensure_compat(X)
 
     def _check_y(self, y=None, return_to_mtype=False):
         """Check and coerce X/y for fit/transform functions.
@@ -423,6 +425,10 @@ class BasePanelMixin(BaseEstimator):
             return_to_mtype=True,
         )
 
+        from sktime.pandapter import ensure_compat
+
+        y_inner = ensure_compat(y_inner)
+
         if return_to_mtype:
             return y_inner, y_metadata, y_inner_mtype
         else:
@@ -486,7 +492,10 @@ class BasePanelMixin(BaseEstimator):
             store=converter_store,
             store_behaviour="freeze",
         )
-        return y
+
+        from sktime.pandapter import ensure_native
+
+        return ensure_native(y)
 
     def _check_input(self, X, y=None, enforce_min_instances=1, return_metadata=True):
         """Check whether input X and y are valid formats with minimum data.

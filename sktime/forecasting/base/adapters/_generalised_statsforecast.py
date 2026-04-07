@@ -4,8 +4,7 @@
 from inspect import signature
 from warnings import warn
 
-import pandas
-
+from sktime import pandapter as pandas
 from sktime.forecasting.base import BaseForecaster, ForecastingHorizon
 from sktime.utils.adapters.forward import _clone_fitted_params
 

@@ -3,8 +3,7 @@
 __author__ = ["tch"]
 __all__ = ["TEST_YS", "TEST_YS_ZERO"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.utils._testing.series import _make_series
 
 RANDOM_SEED = 42

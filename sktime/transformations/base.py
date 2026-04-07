@@ -50,8 +50,7 @@ __all__ = [
 from itertools import product
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.datatypes import (
     VectorizedDF,
@@ -648,7 +647,9 @@ class BaseTransformer(BaseEstimator):
         else:
             X_out = Xt
 
-        return X_out
+        from sktime.pandapter import ensure_native
+
+        return ensure_native(X_out)
 
     def fit_transform(self, X, y=None):
         """Fit to data, then transform it.
@@ -824,7 +825,9 @@ class BaseTransformer(BaseEstimator):
         else:
             X_out = Xt
 
-        return X_out
+        from sktime.pandapter import ensure_native
+
+        return ensure_native(X_out)
 
     def update(self, X, y=None, update_params=True):
         """Update transformer with X, optionally y.
@@ -1261,6 +1264,11 @@ class BaseTransformer(BaseEstimator):
                 y_inner = VectorizedDF(X=y, iterate_as=iterate_y, is_scitype=y_scitype)
             else:
                 y_inner = None
+
+        from sktime.pandapter import ensure_compat
+
+        X_inner = ensure_compat(X_inner)
+        y_inner = ensure_compat(y_inner)
 
         if return_metadata:
             return X_inner, y_inner, metadata

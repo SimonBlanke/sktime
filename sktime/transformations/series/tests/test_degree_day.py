@@ -8,7 +8,7 @@ These tests validate:
 """
 
 # Third-party imports.
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 # Local imports (within sktime).

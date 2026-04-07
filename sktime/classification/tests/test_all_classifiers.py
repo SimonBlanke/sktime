@@ -4,7 +4,7 @@ __author__ = ["mloning", "TonyBagnall", "fkiraly"]
 
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.classification.tests._expected_outputs import (

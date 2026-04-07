@@ -2,7 +2,7 @@
 
 __author__ = ["jgyasu"]
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.metrics import accuracy_score, brier_score_loss
 from sklearn.model_selection import KFold

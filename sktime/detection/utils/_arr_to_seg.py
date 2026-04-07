@@ -1,9 +1,7 @@
 """Utilities for detection tasks."""
 
 import numpy as np
-import pandas as pd
-
-
+from sktime import pandapter as pd
 def arr_to_seg(arr):
     """Convert 1D array-like of integers to segmentation data frame.
 

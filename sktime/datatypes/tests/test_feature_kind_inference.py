@@ -2,8 +2,7 @@
 
 __author__ = ["Abhay-Lejith"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._dtypekind import (
     DtypeKind,
     _get_feature_kind,

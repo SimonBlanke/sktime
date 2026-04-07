@@ -15,7 +15,7 @@ __all__ = [
 ]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold

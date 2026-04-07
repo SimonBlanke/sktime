@@ -8,7 +8,7 @@ from functools import reduce
 from operator import mul
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from pandas.testing import assert_series_equal
 

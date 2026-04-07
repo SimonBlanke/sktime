@@ -29,7 +29,7 @@ __all__ = [
 ]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.multioutput import MultiOutputRegressor
 

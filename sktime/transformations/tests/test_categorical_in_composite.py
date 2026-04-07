@@ -1,6 +1,6 @@
 """Tests for checking composites with categorical data."""
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 

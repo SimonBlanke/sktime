@@ -13,7 +13,7 @@ from itertools import zip_longest
 from operator import itemgetter
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn import preprocessing
 from sklearn.utils import check_random_state
 from sklearn.utils.multiclass import class_distribution

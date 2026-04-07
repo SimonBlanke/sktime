@@ -4,8 +4,7 @@
 __all__ = ["SquaringResiduals"]
 __author__ = ["kcc-lion"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._convert import convert_to
 from sktime.forecasting.base import BaseForecaster, ForecastingHorizon
 from sktime.forecasting.naive import NaiveForecaster

@@ -3,7 +3,7 @@
 from copy import deepcopy
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from scipy.sparse import csr_matrix
 

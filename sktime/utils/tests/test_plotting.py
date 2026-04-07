@@ -4,7 +4,7 @@
 import re
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datasets import load_airline

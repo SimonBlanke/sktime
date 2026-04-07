@@ -1,7 +1,7 @@
 """Test evaluator."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.metrics import accuracy_score
 

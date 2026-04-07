@@ -5,8 +5,8 @@
 __author__ = ["fkiraly"]
 __all__ = ["IxToX"]
 
-import pandas as pd
-from pandas.api.types import is_datetime64_any_dtype
+from sktime import pandapter as pd
+from sktime.pandapter.api.types import is_datetime64_any_dtype
 
 from sktime.transformations.base import BaseTransformer
 

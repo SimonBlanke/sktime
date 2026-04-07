@@ -12,7 +12,7 @@ import itertools
 import time
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.neighbors import NearestCentroid
 
 from sktime.datatypes import convert

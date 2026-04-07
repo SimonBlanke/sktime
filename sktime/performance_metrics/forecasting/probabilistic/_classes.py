@@ -3,8 +3,8 @@
 from logging import warning
 
 import numpy as np
-import pandas as pd
-from pandas.api.types import is_numeric_dtype
+from sktime import pandapter as pd
+from sktime.pandapter.api.types import is_numeric_dtype
 from sklearn.utils import check_array, check_consistent_length
 
 from sktime.datatypes import check_is_scitype, convert, convert_to

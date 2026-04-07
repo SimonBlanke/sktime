@@ -7,7 +7,7 @@ Implementing segmentation using clustering, Read more at
 from collections import Counter
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 
 from sktime.clustering.dbscan import TimeSeriesDBSCAN

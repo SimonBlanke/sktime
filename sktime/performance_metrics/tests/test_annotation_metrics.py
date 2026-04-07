@@ -1,6 +1,6 @@
 """Tests for classes in _classes module."""
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 from sklearn.metrics import f1_score
 

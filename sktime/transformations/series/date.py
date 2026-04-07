@@ -8,8 +8,7 @@ __all__ = ["DateTimeFeatures"]
 import warnings
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 _RAW_DUMMIES = [

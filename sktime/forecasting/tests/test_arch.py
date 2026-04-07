@@ -3,7 +3,7 @@
 __author__ = ["SzymonStolarski"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.forecasting.arch import ARCH

@@ -21,8 +21,7 @@ def convert_from_multiindex_to_listdataset(trainDF, class_val_list=None):
     A ListDataset mtype type to be used as input for gluonts models/estimators
     """
     import numpy as np
-    import pandas as pd
-
+    from sktime import pandapter as pd
     # New dependency from Gluon-ts
     from gluonts.dataset.common import ListDataset
 

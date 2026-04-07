@@ -1,6 +1,6 @@
 """Tests for TSInterpolator."""
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datasets import load_basic_motions

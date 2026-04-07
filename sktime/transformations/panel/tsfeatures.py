@@ -4,8 +4,7 @@
 __author__ = ["Faakhir30"]
 __all__ = ["TSFeaturesTransformer"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

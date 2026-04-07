@@ -5,8 +5,7 @@
 __author__ = ["ishanpai"]
 __all__ = ["Bollinger"]
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_cutoff, update_data
 from sktime.transformations.base import BaseTransformer
 

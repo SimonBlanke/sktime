@@ -6,8 +6,7 @@ __all__ = ["load_tsf_to_dataframe"]
 
 from datetime import datetime
 
-import pandas as pd
-
+from sktime import pandapter as pd
 from sktime.datasets._readers_writers.utils import get_path
 from sktime.datatypes import MTYPE_LIST_HIERARCHICAL, convert
 from sktime.utils.strtobool import strtobool

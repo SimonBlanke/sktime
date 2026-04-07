@@ -17,7 +17,7 @@ __author__ = [
 import math
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from scipy.stats import norm
 
 from sktime.datatypes._convert import convert, convert_to

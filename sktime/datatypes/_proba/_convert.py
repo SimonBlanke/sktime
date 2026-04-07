@@ -31,8 +31,7 @@ __author__ = ["fkiraly"]
 __all__ = ["convert_dict"]
 
 import numpy as np
-import pandas as pd
-
+from sktime import pandapter as pd
 # this needs to be refactored with the convert module
 MTYPE_LIST_PROBA = ["pred_interval", "pred_quantiles"]
 

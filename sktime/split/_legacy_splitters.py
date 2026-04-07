@@ -10,7 +10,7 @@ __author__ = ["mloning"]
 __all__ = ["PresplitFilesCV", "SingleSplit"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.model_selection import train_test_split
 
 

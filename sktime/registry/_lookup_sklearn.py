@@ -6,7 +6,7 @@ __author__ = ["fkiraly"]
 
 from functools import lru_cache
 
-import pandas as pd
+from sktime import pandapter as pd
 from skbase.lookup import all_objects
 
 

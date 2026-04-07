@@ -6,7 +6,7 @@ __author__ = ["tensorflow-as-tf", "mloning", "aiwalter", "fkiraly"]
 __all__ = ["PolynomialTrendForecaster"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline

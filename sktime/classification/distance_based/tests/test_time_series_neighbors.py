@@ -1,7 +1,7 @@
 """Tests for KNeighborsTimeSeriesClassifier."""
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.alignment.dtw_python import AlignerDTW

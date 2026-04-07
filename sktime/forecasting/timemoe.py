@@ -6,7 +6,7 @@ __all__ = ["TimeMoEForecaster"]
 
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 
 from sktime.forecasting.base import _BaseGlobalForecaster

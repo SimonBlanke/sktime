@@ -2,7 +2,7 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 """Tests for Bagging Forecasters."""
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datasets import load_airline

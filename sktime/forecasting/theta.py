@@ -4,7 +4,7 @@ __all__ = ["ThetaForecaster", "ThetaModularForecaster"]
 __author__ = ["big-o", "mloning", "kejsitake", "fkiraly", "GuzalBulatova"]
 
 import numpy as np
-import pandas as pd
+from sktime import pandapter as pd
 from scipy.stats import norm
 
 from sktime.forecasting.base import BaseForecaster

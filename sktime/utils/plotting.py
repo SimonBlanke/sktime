@@ -79,7 +79,7 @@ def plot_series(
 
     _check_soft_dependencies("matplotlib", "seaborn")
     import matplotlib.pyplot as plt
-    import pandas as pd
+    from sktime import pandapter as pd
     import seaborn as sns
 
     from sktime.datatypes import convert_to
@@ -296,8 +296,7 @@ def plot_lags(series, lags=1, suptitle=None):
     _check_soft_dependencies("matplotlib")
     import matplotlib.pyplot as plt
     import numpy as np
-    import pandas as pd
-
+    from sktime import pandapter as pd
     from sktime.utils.validation.forecasting import check_y
 
     check_y(series)
@@ -738,8 +737,7 @@ def plot_calibration(y_true, y_pred, ax=None):
 
     _check_soft_dependencies("matplotlib", "statsmodels")
     import matplotlib.pyplot as plt
-    import pandas as pd
-
+    from sktime import pandapter as pd
     from sktime.datatypes import convert_to
 
     series = convert_to(y_true, "pd.Series", "Series")

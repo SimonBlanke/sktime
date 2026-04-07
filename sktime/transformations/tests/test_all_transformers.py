@@ -4,7 +4,7 @@
 __author__ = ["mloning", "fkiraly"]
 __all__ = []
 
-import pandas as pd
+from sktime import pandapter as pd
 import pytest
 
 from sktime.datatypes import check_is_scitype, convert_to
