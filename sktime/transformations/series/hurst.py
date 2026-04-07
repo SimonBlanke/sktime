@@ -2,9 +2,9 @@
 """Hurst Exponent Transformer for time series analysis."""
 
 import numpy as np
-from sktime import pandapter as pd
 from scipy import stats
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

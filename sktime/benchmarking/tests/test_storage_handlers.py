@@ -1,6 +1,6 @@
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.benchmarking._benchmarking_dataclasses import FoldResults, ResultObject
 from sktime.benchmarking._storage_handlers import (
     CSVStorageHandler,

@@ -3,6 +3,7 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.registry import all_estimators
 

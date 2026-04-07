@@ -2,10 +2,10 @@
 
 __author__ = ["ken-maeda"]
 
-from sktime import pandapter as pd
 import pytest
 from numpy import array_equal
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.cffilter import CFFilter
 

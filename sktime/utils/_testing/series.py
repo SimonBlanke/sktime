@@ -4,8 +4,9 @@ __author__ = ["mloning"]
 __all__ = []
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.utils import check_random_state
+
+from sktime import pandapter as pd
 
 
 def _make_series(

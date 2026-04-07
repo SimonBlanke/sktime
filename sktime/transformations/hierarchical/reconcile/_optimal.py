@@ -1,6 +1,7 @@
 """Full-hierarchy reconciliation."""
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.hierarchical.reconcile._base import _ReconcilerTransformer
 from sktime.transformations.hierarchical.reconcile._utils import (

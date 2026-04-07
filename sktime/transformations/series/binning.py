@@ -7,6 +7,7 @@ __author__ = ["fkiraly"]
 import warnings
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 

@@ -5,6 +5,7 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.multiindex import flatten_multiindex

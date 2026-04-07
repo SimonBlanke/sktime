@@ -1,9 +1,9 @@
 """Tests for PAA utilities."""
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.panel.dictionary_based._paa import PAAlegacy as PAA
 from sktime.utils._testing.panel import _make_nested_from_array

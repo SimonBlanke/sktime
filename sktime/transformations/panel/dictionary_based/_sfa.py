@@ -11,11 +11,11 @@ import sys
 import warnings
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.feature_selection import f_classif
 from sklearn.preprocessing import KBinsDiscretizer
 from sklearn.tree import DecisionTreeClassifier
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.validation.panel import check_X
 

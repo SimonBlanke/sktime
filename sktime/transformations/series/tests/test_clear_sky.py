@@ -5,9 +5,9 @@
 __author__ = ["ciaran-g"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_solar
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.clear_sky import ClearSky

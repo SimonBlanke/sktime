@@ -6,8 +6,9 @@ __author__ = ["fkiraly"]
 
 from functools import lru_cache
 
-from sktime import pandapter as pd
 from skbase.lookup import all_objects
+
+from sktime import pandapter as pd
 
 
 def _all_sklearn_estimators(

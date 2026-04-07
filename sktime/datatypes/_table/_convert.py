@@ -31,6 +31,7 @@ __author__ = ["fkiraly", "shlok191"]
 __all__ = ["convert_dict"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes._convert_utils._convert import _extend_conversions
 from sktime.utils.dependencies import _check_soft_dependencies

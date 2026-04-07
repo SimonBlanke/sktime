@@ -3,10 +3,10 @@
 __author__ = ["juanitorduz"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from pandas.testing import assert_series_equal
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley
 from sktime.forecasting.model_evaluation import evaluate
 from sktime.forecasting.structural import UnobservedComponents

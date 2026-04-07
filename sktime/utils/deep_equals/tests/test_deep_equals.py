@@ -3,10 +3,10 @@
 from copy import deepcopy
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from scipy.sparse import csr_matrix
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.utils.deep_equals._deep_equals import deep_equals
 

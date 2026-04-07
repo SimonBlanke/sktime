@@ -1,9 +1,9 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 """Tests for plugin composites for parameter estimators."""
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.param_est.seasonality import SeasonalityACF
 from sktime.utils.dependencies import _check_estimator_deps
 

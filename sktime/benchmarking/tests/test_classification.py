@@ -2,11 +2,11 @@
 
 __author__ = ["jgyasu"]
 
-from sktime import pandapter as pd
 import pytest
 from sklearn.metrics import accuracy_score, brier_score_loss
 from sklearn.model_selection import KFold
 
+from sktime import pandapter as pd
 from sktime.benchmarking.classification import ClassificationBenchmark
 from sktime.classification.distance_based import KNeighborsTimeSeriesClassifier
 from sktime.classification.dummy import DummyClassifier

@@ -4,11 +4,11 @@
 
 __author__ = ["mloning", "GuzalBulatova", "aiwalter", "RNKuhns", "AnH0ang"]
 
-from sktime import pandapter as pd
 import pytest
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 
+from sktime import pandapter as pd
 from sktime.datasets import load_longley
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.compose import (

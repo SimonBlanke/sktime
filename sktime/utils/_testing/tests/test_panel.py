@@ -4,9 +4,9 @@ __author__ = ["mloning", "fkiraly"]
 __all__ = []
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes import check_is_mtype
 from sktime.utils._testing.panel import (
     _make_panel,

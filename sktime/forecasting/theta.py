@@ -4,9 +4,9 @@ __all__ = ["ThetaForecaster", "ThetaModularForecaster"]
 __author__ = ["big-o", "mloning", "kejsitake", "fkiraly", "GuzalBulatova"]
 
 import numpy as np
-from sktime import pandapter as pd
 from scipy.stats import norm
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.forecasting.compose import ColumnEnsembleForecaster
 from sktime.forecasting.compose._ensemble import _aggregate

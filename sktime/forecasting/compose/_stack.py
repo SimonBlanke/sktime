@@ -6,6 +6,7 @@ __author__ = ["mloning", "fkiraly", "indinewton"]
 __all__ = ["StackingForecaster"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base._meta import _HeterogenousEnsembleForecaster
 from sktime.split import SingleWindowSplitter

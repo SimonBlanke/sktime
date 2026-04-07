@@ -4,9 +4,11 @@ Nearest neighbour classifier that extracts shapee features.
 """
 
 import numpy as np
-from sktime import pandapter as pd
+
 # Tuning
 from sklearn.model_selection import GridSearchCV, KFold
+
+from sktime import pandapter as pd
 
 # Classifiers
 from sktime.classification.base import BaseClassifier

@@ -5,9 +5,9 @@
 __author__ = ["ericjb"]
 __all__ = []
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.dummies import SeasonalDummiesOneHot
 from sktime.utils.dependencies import _check_soft_dependencies

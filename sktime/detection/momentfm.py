@@ -1,6 +1,7 @@
 """Interface for the momentfm deep learning time series anomaly detector."""
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 from sktime.split import temporal_train_test_split

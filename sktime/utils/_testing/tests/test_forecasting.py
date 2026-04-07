@@ -3,9 +3,9 @@
 __author__ = ["mloning"]
 __all__ = []
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.utils._testing.forecasting import make_forecasting_problem
 
 

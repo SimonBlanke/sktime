@@ -67,6 +67,7 @@ __all__ = [
 from copy import deepcopy
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes._check import mtype as infer_mtype
 from sktime.datatypes._hierarchical import convert_dict_Hierarchical

@@ -10,6 +10,7 @@ __all__ = [
 ]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.regression.compose import ComposableTimeSeriesForestRegressor
 from sktime.regression.interval_based import TimeSeriesForestRegressor

@@ -3,6 +3,7 @@
 from collections import deque
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 

@@ -6,6 +6,7 @@ __author__ = ["viktorkaz", "mloning"]
 import os
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.benchmarking.base import BaseResults, HDDBaseResults, _PredictionsWrapper
 

@@ -6,9 +6,9 @@ __author__ = ["aiwalter"]
 __all__ = ["Imputer"]
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.trend import PolynomialTrendForecaster
 from sktime.transformations.base import BaseTransformer

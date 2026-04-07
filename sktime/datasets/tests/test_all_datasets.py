@@ -7,9 +7,9 @@ import types
 from contextlib import nullcontext
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets.base._base import InvalidSetError
 from sktime.datatypes._check import check_is_mtype
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester

@@ -2,6 +2,7 @@
 """Feature transformer that returns features of time series including categories."""
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 

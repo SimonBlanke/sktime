@@ -6,6 +6,7 @@ import warnings
 from copy import deepcopy
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.base.adapters._pytorch import (

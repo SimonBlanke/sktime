@@ -8,6 +8,7 @@ __all__ = ["BaseDistribution"]
 from warnings import warn
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.base import BaseObject
 from sktime.utils.dependencies import _check_estimator_deps

@@ -6,6 +6,7 @@ __author__ = ["mloning", "aiwalter", "k1m190r", "fkiraly"]
 __all__ = ["_TbatsAdapter"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.validation import check_n_jobs

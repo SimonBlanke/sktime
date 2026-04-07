@@ -29,10 +29,10 @@ __all__ = [
 ]
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.multioutput import MultiOutputRegressor
 
+from sktime import pandapter as pd
 from sktime.datatypes._utilities import get_time_index
 from sktime.forecasting.base import BaseForecaster, ForecastingHorizon
 from sktime.forecasting.base._fh import _index_range

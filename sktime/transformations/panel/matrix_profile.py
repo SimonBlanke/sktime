@@ -3,6 +3,7 @@
 __author__ = ["Claudia Rincon Sanchez"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 

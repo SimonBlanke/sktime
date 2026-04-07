@@ -15,11 +15,11 @@ __all__ = [
 ]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley
 
 # from sktime.exceptions import FitFailedWarning

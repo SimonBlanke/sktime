@@ -2,9 +2,9 @@
 """Parameter search via scikit-optimize."""
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.model_selection import check_cv
 
+from sktime import pandapter as pd
 from sktime.exceptions import NotFittedError
 from sktime.forecasting.model_evaluation import evaluate
 from sktime.forecasting.model_selection._base import BaseGridSearch

@@ -7,9 +7,9 @@ __author__ = ["fkiraly"]
 import itertools
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes import get_examples
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.lag import Lag

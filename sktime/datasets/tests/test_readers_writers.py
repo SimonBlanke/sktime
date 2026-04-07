@@ -14,11 +14,11 @@ import os
 import tempfile
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from pandas._testing import assert_frame_equal
 
 import sktime
+from sktime import pandapter as pd
 from sktime.datasets import (
     generate_example_long_table,
     load_from_long_to_dataframe,

@@ -50,6 +50,7 @@ __all__ = [
 from itertools import product
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.datatypes import (

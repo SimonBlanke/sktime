@@ -2,6 +2,7 @@
 
 __author__ = ["felipeangelimvieira"]
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester
 

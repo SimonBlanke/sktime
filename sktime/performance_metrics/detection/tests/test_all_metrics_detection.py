@@ -1,8 +1,8 @@
 """Tests for all sktime detection metrics."""
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester
 
 

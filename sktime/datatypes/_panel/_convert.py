@@ -27,7 +27,9 @@ ValueError and TypeError, if requested conversion is not possible
 """
 
 import numpy as np
+
 from sktime import pandapter as pd
+
 __all__ = [
     "convert_dict",
 ]

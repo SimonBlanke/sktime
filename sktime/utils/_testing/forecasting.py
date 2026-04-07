@@ -12,6 +12,7 @@ __all__ = [
 ]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.utils._testing.series import _make_series

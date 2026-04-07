@@ -8,6 +8,7 @@ import warnings
 from functools import singledispatch
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes import VectorizedDF
 from sktime.datatypes._utilities import get_time_index

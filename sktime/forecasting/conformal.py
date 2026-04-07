@@ -11,9 +11,9 @@ __author__ = ["fkiraly", "bethrice44"]
 from math import floor
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.base import clone
 
+from sktime import pandapter as pd
 from sktime.datatypes import MTYPE_LIST_SERIES, convert, convert_to
 from sktime.datatypes._utilities import get_slice
 from sktime.forecasting.base import BaseForecaster

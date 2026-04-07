@@ -3,9 +3,9 @@
 import sys
 
 import numpy as np
-from sktime import pandapter as pd
 import scipy.stats
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.transformations.panel.dictionary_based import PAAlegacy as PAA
 

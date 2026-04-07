@@ -7,9 +7,9 @@ Classes named as ``*Error`` or ``*Loss`` return a value to minimize:
 the lower the better.
 """
 
-from sktime import pandapter as pd
 from scipy.stats import gmean
 
+from sktime import pandapter as pd
 from sktime.performance_metrics.forecasting._base import BaseForecastingErrorMetricFunc
 
 

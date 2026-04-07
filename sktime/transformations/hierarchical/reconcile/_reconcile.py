@@ -7,9 +7,9 @@ These reconcilers only depend on the structure of the hierarchy.
 __author__ = ["ciaran-g", "eenticott-shell", "k1m190r"]
 
 import numpy as np
-from sktime import pandapter as pd
 from numpy.linalg import inv
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.transformations.hierarchical.aggregate import _check_index_no_total
 from sktime.utils.warnings import warn

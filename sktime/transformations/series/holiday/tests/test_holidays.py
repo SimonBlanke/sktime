@@ -7,10 +7,10 @@ __author__ = ["VyomkeshVyas", "fnhirwa"]
 from datetime import date
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from pandas.testing import assert_frame_equal
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.holiday._holidayfeats import HolidayFeatures
 

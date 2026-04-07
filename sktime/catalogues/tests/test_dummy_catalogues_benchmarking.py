@@ -1,8 +1,8 @@
 """Test benchmarking using dummy catalogues."""
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.benchmarking.classification import ClassificationBenchmark
 from sktime.benchmarking.forecasting import ForecastingBenchmark
 from sktime.catalogues import (

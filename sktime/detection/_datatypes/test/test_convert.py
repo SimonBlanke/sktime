@@ -1,8 +1,8 @@
 """Tests for detection output converters."""
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.detection._datatypes._convert import (
     _convert_points_to_segments,
     _convert_segments_to_points,

@@ -8,6 +8,7 @@ __all__ = ["_HeterogenousMetaEstimator", "_ColumnEstimator"]
 from inspect import isclass
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.base._base import _safe_clone

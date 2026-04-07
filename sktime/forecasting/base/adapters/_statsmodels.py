@@ -8,6 +8,7 @@ __all__ = ["_StatsModelsAdapter"]
 import inspect
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.warnings import warn

@@ -1,10 +1,10 @@
 """Test evaluator."""
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from sklearn.metrics import accuracy_score
 
+from sktime import pandapter as pd
 from sktime.benchmarking.evaluation import Evaluator
 from sktime.benchmarking.metrics import PairwiseMetric
 from sktime.benchmarking.results import RAMResults

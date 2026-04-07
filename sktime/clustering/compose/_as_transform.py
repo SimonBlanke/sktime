@@ -2,6 +2,7 @@
 
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 

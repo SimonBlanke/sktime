@@ -3,9 +3,9 @@
 __author__ = ["SimonBlanke"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.dummy_global import DummyGlobalForecaster
 from sktime.utils._testing.hierarchical import _make_hierarchical
 from sktime.utils._testing.series import _make_series

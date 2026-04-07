@@ -2,7 +2,10 @@
 """Eclectic utilities for the datatypes module."""
 
 import numpy as np
+
 from sktime import pandapter as pd
+
+
 def _get_index(x):
     if hasattr(x, "index"):
         return x.index

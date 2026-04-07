@@ -19,9 +19,9 @@ from inspect import isclass
 from operator import itemgetter
 from pathlib import Path
 
-from sktime import pandapter as pd
 from skbase.lookup import all_objects
 
+from sktime import pandapter as pd
 from sktime.base import BaseObject
 from sktime.registry._base_classes import (
     _get_all_descendants,

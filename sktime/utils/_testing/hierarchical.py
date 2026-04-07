@@ -7,9 +7,9 @@ __author__ = ["ltsaprounis", "ciaran-g"]
 from itertools import product
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.utils._testing.series import _make_index
 

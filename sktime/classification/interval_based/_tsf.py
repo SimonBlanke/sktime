@@ -8,10 +8,10 @@ __all__ = ["TimeSeriesForestClassifier"]
 
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.ensemble._forest import ForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 
+from sktime import pandapter as pd
 from sktime.base._panel.forest._tsf import BaseTimeSeriesForest, _transform
 from sktime.classification.base import BaseClassifier
 

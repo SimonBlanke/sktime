@@ -6,9 +6,9 @@ __author__ = ["mloning", "fkiraly"]
 __all__ = ["TabularToSeriesAdaptor"]
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.base import clone
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.adapters._safe_call import _method_has_param_and_default
 from sktime.utils.sklearn import prep_skl_df

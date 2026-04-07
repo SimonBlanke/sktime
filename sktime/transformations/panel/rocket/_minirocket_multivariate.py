@@ -6,6 +6,7 @@ __all__ = ["MiniRocketMultivariate"]
 import multiprocessing
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 

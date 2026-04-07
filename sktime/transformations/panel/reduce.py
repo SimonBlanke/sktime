@@ -8,6 +8,7 @@ __all__ = ["Tabularizer"]
 import warnings
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes import convert, convert_to
 from sktime.transformations.base import BaseTransformer
@@ -180,6 +181,7 @@ class TimeBinner(BaseTransformer):
             ``create_test_instance`` uses the first (or only) dictionary in ``params``
         """
         from sktime import pandapter as pd
+
         idx = pd.interval_range(start=0, end=100, freq=10, closed="left")
         return [
             {"idx": idx},

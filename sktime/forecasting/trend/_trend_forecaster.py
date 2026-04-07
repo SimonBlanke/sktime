@@ -5,10 +5,10 @@
 __author__ = ["tensorflow-as-tf", "mloning", "aiwalter", "fkiraly"]
 __all__ = ["TrendForecaster"]
 
-from sktime import pandapter as pd
 from sklearn.base import clone
 from sklearn.linear_model import LinearRegression
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.forecasting.trend._util import _get_X_numpy_int_from_pandas
 

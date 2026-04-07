@@ -5,6 +5,7 @@ __all__ = ["VECM"]
 __author__ = ["thayeylolu", "AurumnPegasus"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base.adapters import _StatsModelsAdapter
 

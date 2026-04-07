@@ -1,8 +1,8 @@
 import itertools
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class, run_test_module_changed
 from sktime.transformations.hierarchical.reconcile._topdown import (
     SqueezeHierarchy,

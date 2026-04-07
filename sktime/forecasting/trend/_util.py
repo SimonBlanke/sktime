@@ -5,6 +5,8 @@
 __author__ = ["tensorflow-as-tf", "mloning", "aiwalter", "fkiraly"]
 
 from sktime import pandapter as pd
+
+
 def _get_X_numpy_int_from_pandas(x):
     """Convert pandas index to an sklearn compatible X, 2D np.ndarray, int type."""
     if isinstance(x, (pd.DatetimeIndex)):

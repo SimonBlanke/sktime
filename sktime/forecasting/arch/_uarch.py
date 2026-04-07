@@ -9,9 +9,9 @@ import itertools
 from collections import OrderedDict
 
 import numpy as np
-from sktime import pandapter as pd
 import scipy.stats as stats
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 
 

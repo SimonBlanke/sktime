@@ -3,6 +3,7 @@
 from inspect import signature
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.base import BaseObject
 

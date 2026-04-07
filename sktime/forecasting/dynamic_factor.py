@@ -2,6 +2,7 @@
 """Implements DynamicFactor Model as interface to statsmodels."""
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base.adapters import _StatsModelsAdapter
 

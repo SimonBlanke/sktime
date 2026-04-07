@@ -15,9 +15,9 @@ It does not require any training or data input.
 """
 
 __author__ = ["sinemkilicdere", "martinloretzzz"]
-from sktime import pandapter as pd
 from skbase.utils.dependencies import _check_soft_dependencies
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 from sktime.utils.singleton import _multiton
 

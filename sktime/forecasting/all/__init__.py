@@ -6,6 +6,7 @@ __author__ = ["mloning", "fkiraly"]
 
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley, load_lynx, load_shampoo_sales
 from sktime.forecasting.base import ForecastingHorizon

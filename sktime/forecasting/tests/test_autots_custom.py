@@ -1,8 +1,8 @@
 """Tests for AutoTS custom functionality."""
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.autots import AutoTS
 from sktime.utils.dependencies import _check_estimator_deps
 
@@ -74,6 +74,7 @@ def test_autots_tags():
 def test_autots_exogenous():
     """Test that AutoTS can handle exogenous data."""
     import numpy as np
+
     from sktime import pandapter as pd
     from sktime.datasets import load_airline
 

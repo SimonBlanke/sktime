@@ -6,9 +6,9 @@ import importlib
 import re
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_longley
 from sktime.forecasting.darts import (
     DartsLinearRegressionModel,

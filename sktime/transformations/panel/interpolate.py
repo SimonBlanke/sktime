@@ -1,6 +1,7 @@
 """Time series interpolator/re-sampler."""
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.pandas import df_map

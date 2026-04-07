@@ -6,10 +6,10 @@ __all__ = ["Evaluator"]
 import itertools
 
 import numpy as np
-from sktime import pandapter as pd
 from scipy import stats
 from scipy.stats import ranksums, ttest_ind
 
+from sktime import pandapter as pd
 from sktime.benchmarking.base import BaseResults
 from sktime.exceptions import NotEvaluatedError
 from sktime.utils.dependencies import _check_soft_dependencies

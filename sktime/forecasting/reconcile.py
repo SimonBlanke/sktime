@@ -6,6 +6,7 @@ __all__ = ["ReconcilerForecaster"]
 __author__ = ["ciaran-g", "felipeangelimvieira"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster, ForecastingHorizon
 from sktime.transformations.hierarchical.aggregate import (

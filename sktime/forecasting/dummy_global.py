@@ -4,6 +4,7 @@ __author__ = ["SimonBlanke"]
 __all__ = ["DummyGlobalForecaster"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 

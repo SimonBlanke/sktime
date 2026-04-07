@@ -2,10 +2,10 @@
 
 __author__ = ["thayeylolu"]
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from numpy.testing import assert_allclose
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 
 #

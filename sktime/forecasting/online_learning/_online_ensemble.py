@@ -5,6 +5,7 @@
 __author__ = ["magittan", "mloning"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.compose._ensemble import EnsembleForecaster
 

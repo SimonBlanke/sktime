@@ -1,6 +1,8 @@
 """Utilities to handle checks and conversions between output formats of detectors."""
 
 from sktime import pandapter as pd
+
+
 def _get_example_segments_0():
     """Generate example 0 for segmentation output.
 

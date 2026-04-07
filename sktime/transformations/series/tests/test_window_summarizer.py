@@ -3,9 +3,9 @@
 __author__ = ["danbartl"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline, load_longley
 from sktime.datatypes import get_examples
 from sktime.split import temporal_train_test_split

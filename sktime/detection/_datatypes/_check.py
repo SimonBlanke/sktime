@@ -1,6 +1,8 @@
 """Utilities to handle checks and conversions between output formats of detectors."""
 
 from sktime import pandapter as pd
+
+
 def _is_valid_detection(obj, type="points"):
     """Check if the input is valid common output format.
 

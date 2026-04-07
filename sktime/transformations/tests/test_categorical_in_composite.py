@@ -1,9 +1,9 @@
 """Tests for checking composites with categorical data."""
 
-from sktime import pandapter as pd
 import pytest
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.transformations.compose import ColumnEnsembleTransformer
 from sktime.transformations.series.adapt import TabularToSeriesAdaptor

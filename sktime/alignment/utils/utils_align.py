@@ -3,6 +3,7 @@
 __author__ = ["fkiraly"]
 
 from sktime import pandapter as pd
+
 # todo: need to wait for datatypes PR to merge
 # from sktime.datatypes import check_is_mtype
 

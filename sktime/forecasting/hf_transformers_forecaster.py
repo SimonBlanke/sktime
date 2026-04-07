@@ -3,8 +3,9 @@
 from copy import deepcopy
 
 import numpy as np
-from sktime import pandapter as pd
 from skbase.utils.dependencies import _check_soft_dependencies
+
+from sktime import pandapter as pd
 
 if _check_soft_dependencies("torch", severity="none"):
     import torch

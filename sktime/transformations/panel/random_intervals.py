@@ -7,9 +7,9 @@ __author__ = ["MatthewMiddlehurst"]
 __all__ = ["RandomIntervals"]
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.base._base import _clone_estimator
 from sktime.transformations.base import BaseTransformer
 from sktime.transformations.series.summarize import SummaryTransformer

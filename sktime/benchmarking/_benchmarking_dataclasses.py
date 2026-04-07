@@ -5,6 +5,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, field, fields
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.benchmarking.base import BaseMetric
 from sktime.split.base._base_splitter import BaseSplitter

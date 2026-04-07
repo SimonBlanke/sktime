@@ -1,7 +1,10 @@
 """Utilities for detection tasks."""
 
 import numpy as np
+
 from sktime import pandapter as pd
+
+
 def seg_middlepoint(seg_df):
     """Convert segmentation data frame to midpoint detections.
 

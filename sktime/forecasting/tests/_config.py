@@ -23,6 +23,7 @@ __all__ = [
 ]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.utils._testing.series import _make_series
 

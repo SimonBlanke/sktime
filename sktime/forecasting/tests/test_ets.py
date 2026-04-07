@@ -3,10 +3,10 @@
 __author__ = ["HYang1996"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from numpy.testing import assert_array_equal
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.forecasting.ets import AutoETS
 from sktime.tests.test_switch import run_test_for_class

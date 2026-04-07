@@ -3,10 +3,10 @@
 from copy import deepcopy
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from pandas.testing import assert_frame_equal, assert_index_equal
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.fourier import FourierFeatures

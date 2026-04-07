@@ -5,9 +5,9 @@ __author__ = ["ltsaprounis"]
 
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.transformations.series.boxcox import BoxCoxTransformer
 

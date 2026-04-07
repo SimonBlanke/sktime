@@ -13,11 +13,11 @@ import warnings
 from multiprocessing.pool import ThreadPool as Pool
 
 import numpy as np
-from sktime import pandapter as pd
 from joblib import parallel_backend
 from scipy.sparse.linalg import svds
 from sklearn.cluster import KMeans, MiniBatchKMeans
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

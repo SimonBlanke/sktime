@@ -1,9 +1,9 @@
 import itertools
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.forecasting.compose import GroupbyCategoryForecaster
 from sktime.forecasting.naive import NaiveForecaster
 from sktime.transformations.base import BaseTransformer

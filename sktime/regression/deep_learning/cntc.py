@@ -199,8 +199,9 @@ class CNTCRegressor(BaseDeepRegressor):
             The input to be fed to the two arms of CNTC.
         """
         import numpy as np
-        from sktime import pandapter as pd
         from tensorflow import keras
+
+        from sktime import pandapter as pd
 
         if X.shape[2] == 1:
             # Converting data to pandas

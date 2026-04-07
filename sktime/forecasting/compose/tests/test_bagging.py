@@ -2,9 +2,9 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
 """Tests for Bagging Forecasters."""
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datasets import load_airline
 from sktime.forecasting.compose import BaggingForecaster
 from sktime.forecasting.naive import NaiveForecaster

@@ -38,9 +38,9 @@ from dataclasses import dataclass, field
 
 import numpy as np
 import numpy.typing as npt
-from sktime import pandapter as pd
 from sklearn.utils.validation import check_random_state
 
+from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 
 logger = logging.getLogger(__name__)

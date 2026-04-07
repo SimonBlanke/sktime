@@ -1,9 +1,10 @@
 """Generates Features for Temporal Emboddings."""
 
 import numpy as np
-from sktime import pandapter as pd
 from pandas.tseries import offsets
 from pandas.tseries.frequencies import to_offset
+
+from sktime import pandapter as pd
 
 # used for embed (embed, fixed-embed) temporal_encoding_type
 

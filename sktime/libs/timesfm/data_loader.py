@@ -15,9 +15,9 @@
 """data_loader."""
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.preprocessing import StandardScaler
 
+from sktime import pandapter as pd
 from sktime.libs.timesfm import time_features
 from sktime.utils.dependencies import _check_soft_dependencies
 

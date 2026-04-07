@@ -9,9 +9,9 @@ forecasting process.
 
 __author__ = ["ninedigits"]
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.base import _HeterogenousMetaEstimator
 from sktime.forecasting.base._base import BaseForecaster
 from sktime.forecasting.compose import EnsembleForecaster, FallbackForecaster

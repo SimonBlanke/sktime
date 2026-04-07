@@ -11,6 +11,7 @@ import warnings
 from copy import deepcopy
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes import check_is_scitype, convert
 from sktime.exceptions import FitFailedWarning

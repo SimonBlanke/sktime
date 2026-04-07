@@ -6,6 +6,7 @@ __author__ = ["GuzalBulatova", "mloning"]
 __all__ = ["ThetaLinesTransformer"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.trend import PolynomialTrendForecaster

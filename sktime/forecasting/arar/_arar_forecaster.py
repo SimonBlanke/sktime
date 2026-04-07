@@ -8,9 +8,9 @@ import math
 import warnings
 
 import numpy as np
-from sktime import pandapter as pd
 from scipy.stats import norm
 
+from sktime import pandapter as pd
 from sktime.forecasting.base import BaseForecaster
 
 

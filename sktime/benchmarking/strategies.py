@@ -3,12 +3,12 @@
 __all__ = ["TSCStrategy", "TSRStrategy"]
 __author__ = ["mloning", "sajaysurya"]
 
-from sktime import pandapter as pd
 from joblib import dump, load
 from sklearn.base import ClassifierMixin, RegressorMixin
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from sklearn.pipeline import Pipeline
 
+from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.classification.base import BaseClassifier
 from sktime.forecasting.base._sktime import BaseForecaster

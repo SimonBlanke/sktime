@@ -1,9 +1,9 @@
 """Tests for classes in _classes module."""
 
-from sktime import pandapter as pd
 import pytest
 from sklearn.metrics import f1_score
 
+from sktime import pandapter as pd
 from sktime.performance_metrics.annotation import metrics
 
 

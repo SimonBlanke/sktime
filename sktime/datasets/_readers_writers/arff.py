@@ -8,6 +8,7 @@ import os
 import textwrap
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datasets._readers_writers.utils import get_path
 from sktime.transformations.base import BaseTransformer

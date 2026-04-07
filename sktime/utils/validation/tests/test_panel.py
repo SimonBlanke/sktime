@@ -5,9 +5,9 @@ __author__ = ["mloning", "TonyBagnall"]
 __all__ = ["test_check_X_bad_input_args"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils._testing.panel import make_classification_problem
 from sktime.utils.validation.panel import check_X, check_X_y, check_y

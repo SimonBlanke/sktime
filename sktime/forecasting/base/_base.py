@@ -40,6 +40,7 @@ from copy import deepcopy
 from itertools import product
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.base._proba import _PredictProbaMixin

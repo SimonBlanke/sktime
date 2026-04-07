@@ -11,9 +11,9 @@ from copy import deepcopy
 from inspect import getfullargspec, isfunction, signature
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.utils import check_array
 
+from sktime import pandapter as pd
 from sktime.datatypes import VectorizedDF, check_is_scitype, convert_to
 from sktime.performance_metrics.base import BaseMetric
 from sktime.performance_metrics.forecasting._coerce import (

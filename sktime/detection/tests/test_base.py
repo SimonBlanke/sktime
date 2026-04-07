@@ -3,11 +3,11 @@
 __author__ = ["Alex-JG3"]
 __all__ = []
 
-from sktime import pandapter as pd
 import pytest
-from sktime.pandapter import testing
 
+from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
+from sktime.pandapter import testing
 from sktime.tests.test_switch import run_test_for_class
 
 

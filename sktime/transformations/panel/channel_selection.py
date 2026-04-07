@@ -12,9 +12,9 @@ import itertools
 import time
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.neighbors import NearestCentroid
 
+from sktime import pandapter as pd
 from sktime.datatypes import convert
 from sktime.datatypes._panel._convert import from_3d_numpy_to_nested
 from sktime.transformations.base import BaseTransformer

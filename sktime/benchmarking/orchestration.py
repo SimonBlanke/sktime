@@ -5,9 +5,9 @@ __author__ = ["viktorkaz", "mloning"]
 
 import logging
 
-from sktime import pandapter as pd
 from sklearn.base import clone
 
+from sktime import pandapter as pd
 from sktime.benchmarking.tasks import TSCTask, TSRTask
 
 log = logging.getLogger()

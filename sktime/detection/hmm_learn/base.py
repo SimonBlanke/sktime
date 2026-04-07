@@ -8,6 +8,7 @@ Please see the original library
 """
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 from sktime.detection.utils._arr_to_seg import arr_to_seg

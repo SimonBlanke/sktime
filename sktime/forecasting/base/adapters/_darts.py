@@ -364,10 +364,8 @@ class _DartsRegressionAdapter(BaseForecaster):
 
         if _is_int64_type(expected_index):
             if X is not None:
-                # Int64Index removed in pandas 2.0, use pd.Index with dtype check
-
-                endogenous_point_predictions.index = Int64Index(
-                    endogenous_point_predictions.index
+                endogenous_point_predictions.index = pd.Index(
+                    endogenous_point_predictions.index, dtype="int64"
                 )
 
         if isinstance(expected_index, pd.PeriodIndex):
@@ -685,12 +683,7 @@ def _is_int64_type(index: pd.Index) -> bool:
     bool
         True if the index is numeric, False otherwise
     """
-    try:
-        # Int64Index removed in pandas 2.0, use pd.Index with dtype check
-
-        return isinstance(index, Int64Index)
-    except ImportError:
-        return False
+    return pd.api.types.is_integer_dtype(index)
 
 
 __all__ = ["_DartsRegressionAdapter", "_DartsRegressionModelsAdapter"]

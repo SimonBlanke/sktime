@@ -6,6 +6,7 @@ Exposes basic interface, excluding multivariate case.
 __author__ = ["fkiraly"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.alignment.base import BaseAligner
 

@@ -8,6 +8,7 @@ __all__ = ["Catch22"]
 
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes import convert_to
 from sktime.transformations.base import BaseTransformer

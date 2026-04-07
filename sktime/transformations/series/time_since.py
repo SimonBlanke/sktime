@@ -10,9 +10,9 @@ import warnings
 from string import digits
 
 import numpy as np
-from sktime import pandapter as pd
 from pandas.tseries.frequencies import get_period_alias
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 
 

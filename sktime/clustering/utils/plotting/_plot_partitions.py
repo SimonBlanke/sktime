@@ -4,6 +4,7 @@ __author__ = ["chrisholder", "TonyBagnall"]
 __all__ = ["plot_cluster_algorithm"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes import convert_to
 from sktime.utils.dependencies import _check_soft_dependencies

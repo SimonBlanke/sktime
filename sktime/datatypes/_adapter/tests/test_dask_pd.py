@@ -3,9 +3,9 @@
 
 from copy import deepcopy
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes._adapter.dask_to_pd import (
     check_dask_frame,
     convert_dask_to_pandas,

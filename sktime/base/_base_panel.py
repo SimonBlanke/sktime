@@ -12,6 +12,7 @@ __all__ = ["BasePanelMixin"]
 
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.base import BaseEstimator
 from sktime.utils.warnings import warn

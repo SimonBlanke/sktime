@@ -6,9 +6,9 @@ import datetime
 import math
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.neighbors import LocalOutlierFactor
 
+from sktime import pandapter as pd
 from sktime.detection.base import BaseDetector
 
 

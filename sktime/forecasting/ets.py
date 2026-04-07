@@ -9,6 +9,7 @@ import warnings
 from itertools import product
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.forecasting.base.adapters import _StatsModelsAdapter
 

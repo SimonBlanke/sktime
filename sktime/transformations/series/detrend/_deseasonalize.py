@@ -6,6 +6,7 @@ __author__ = ["mloning", "eyalshafran", "aiwalter"]
 __all__ = ["Deseasonalizer", "ConditionalDeseasonalizer", "STLTransformer"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.datetime import _get_duration, _get_freq

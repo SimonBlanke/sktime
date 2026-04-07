@@ -3,9 +3,9 @@
 __author__ = ["phoeenniixx"]
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.preprocessing import StandardScaler
 
+from sktime import pandapter as pd
 from sktime.forecasting.base.adapters._pytorch import BaseDeepNetworkPyTorch
 from sktime.networks.rbf import RBFNetwork
 from sktime.utils.dependencies._dependencies import _check_soft_dependencies

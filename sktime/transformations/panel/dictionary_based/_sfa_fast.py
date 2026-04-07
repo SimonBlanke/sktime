@@ -11,12 +11,12 @@ import multiprocessing
 import sys
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.feature_selection import chi2, f_classif
 from sklearn.preprocessing import KBinsDiscretizer
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.utils import check_random_state
 
+from sktime import pandapter as pd
 from sktime.transformations.base import BaseTransformer
 from sktime.utils.validation.panel import check_X
 

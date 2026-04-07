@@ -4,11 +4,11 @@ import warnings
 
 import numpy as np
 import numpy.typing as npt
-from sktime import pandapter as pd
-from sktime.pandapter.api.types import is_numeric_dtype
 from sklearn.decomposition import PCA
 from sklearn.neighbors import NearestNeighbors
 
+from sktime import pandapter as pd
+from sktime.pandapter.api.types import is_numeric_dtype
 from sktime.transformations.base import BaseTransformer
 
 __author__ = ["KatieBuc"]

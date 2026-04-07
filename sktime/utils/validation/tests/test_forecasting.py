@@ -5,10 +5,10 @@
 __author__ = ["mloning"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from pytest import raises
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils.validation.forecasting import check_fh
 

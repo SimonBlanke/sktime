@@ -13,6 +13,7 @@ __all__ = [
 import itertools
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datasets._readers_writers.utils import (
     _alias_mtype_check,

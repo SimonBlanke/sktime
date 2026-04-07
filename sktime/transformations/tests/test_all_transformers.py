@@ -4,9 +4,9 @@
 __author__ = ["mloning", "fkiraly"]
 __all__ = []
 
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes import check_is_scitype, convert_to
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester
 from sktime.utils._testing.estimator_checks import _assert_array_almost_equal

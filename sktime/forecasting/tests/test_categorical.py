@@ -9,10 +9,10 @@ __author__ = ["Abhay-Lejith"]
 
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from sklearn.ensemble import HistGradientBoostingRegressor
 
+from sktime import pandapter as pd
 from sktime.forecasting.compose import SkforecastAutoreg
 from sktime.forecasting.compose._reduce import YfromX
 from sktime.forecasting.dummy import ForecastKnownValues

@@ -10,7 +10,6 @@ import time
 from itertools import product
 
 import numpy as np
-from sktime import pandapter as pd
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import (
     GridSearchCV,
@@ -20,6 +19,7 @@ from sklearn.model_selection import (
     cross_val_predict,
 )
 
+from sktime import pandapter as pd
 from sktime.classification.base import BaseClassifier
 from sktime.classification.distance_based._time_series_neighbors import (
     KNeighborsTimeSeriesClassifier,

@@ -4,6 +4,7 @@
 __author__ = ["fkiraly"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes._check import check_raise
 from sktime.tests.test_all_estimators import BaseFixtureGenerator, QuickTester

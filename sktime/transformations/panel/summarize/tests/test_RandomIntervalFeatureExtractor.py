@@ -1,11 +1,11 @@
 """Tests for RIFE."""
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.compose import FeatureUnion
 from sktime.transformations.panel.reduce import Tabularizer

@@ -36,6 +36,7 @@ metadata: dict - metadata about obj if valid, otherwise None
 """
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes._base._common import _req
 from sktime.datatypes._base._common import _ret as ret

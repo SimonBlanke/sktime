@@ -7,7 +7,6 @@ __all__ = ["IxToX"]
 
 from sktime import pandapter as pd
 from sktime.pandapter.api.types import is_datetime64_any_dtype
-
 from sktime.transformations.base import BaseTransformer
 
 

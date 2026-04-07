@@ -4,9 +4,9 @@
 from copy import deepcopy
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.datatypes._adapter.polars import (
     convert_pandas_to_polars,
     convert_polars_to_pandas,

@@ -5,9 +5,9 @@
 __author__ = ["tch", "RNKuhns"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.performance_metrics.forecasting import (
     GeometricMeanRelativeAbsoluteError,
     GeometricMeanRelativeSquaredError,

@@ -6,9 +6,9 @@ __author__ = ["RNKuhns"]
 import re
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.summarize import (
     ALLOWED_SUM_FUNCS,

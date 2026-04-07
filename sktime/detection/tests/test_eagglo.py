@@ -3,9 +3,9 @@
 __author__ = ["KatieBuc"]
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.detection.eagglo import EAgglo
 from sktime.tests.test_switch import run_test_for_class
 

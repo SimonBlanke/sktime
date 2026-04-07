@@ -11,6 +11,8 @@ from sktime.utils.dependencies import _check_soft_dependencies
 __author__ = ["mloning", "satya-pattnaik", "fkiraly"]
 
 from sktime import pandapter as pd
+
+
 class PyODDetector(BaseDetector):
     """Transformer that applies outlier detector from pyOD.
 

@@ -1,10 +1,10 @@
 """Forecasting benchmarks tests."""
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 from sklearn.model_selection import KFold
 
+from sktime import pandapter as pd
 from sktime.benchmarking.benchmarks import _coerce_estimator_and_id
 from sktime.benchmarking.forecasting import ForecastingBenchmark
 from sktime.datasets import (

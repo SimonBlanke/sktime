@@ -1,6 +1,8 @@
 """Tests for dummy detectors."""
 
 from sktime import pandapter as pd
+
+
 def test_dummy_changepoints():
     """Test expected output for DummyChangePoints."""
     from sktime.detection.dummy._dummy_regular_cp import DummyRegularChangePoints

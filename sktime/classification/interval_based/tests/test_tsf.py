@@ -3,9 +3,9 @@
 from unittest.mock import MagicMock, patch
 
 import numpy as np
-from sktime import pandapter as pd
 import pytest
 
+from sktime import pandapter as pd
 from sktime.classification.interval_based import TimeSeriesForestClassifier
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils._testing.panel import make_classification_problem

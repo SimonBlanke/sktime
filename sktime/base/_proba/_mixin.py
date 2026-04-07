@@ -5,6 +5,7 @@ __author__ = ["fkiraly"]
 __all__ = ["_PredictProbaMixin"]
 
 import numpy as np
+
 from sktime import pandapter as pd
 from sktime.datatypes import convert_to
 
