@@ -104,9 +104,9 @@ def merge(*args, **kwargs):
 def ensure_compat(obj):
     """Convert a plain pandas object to its compat version.
 
-    Reassigns ``__class__`` in-place (no data copy) and converts the
-    object's index if it is a ``DatetimeIndex``.  Safe to call on objects
-    that are already compat types: the call is a no-op.
+    Creates a shallow copy (no data duplication) and reassigns its
+    ``__class__``. The original object is never mutated, which is
+    important for sktime's side-effect-free contract on fit/transform args.
 
     Parameters
     ----------
@@ -116,14 +116,17 @@ def ensure_compat(obj):
     Returns
     -------
     CompatDataFrame, CompatSeries, or None
-        The same object with its class upgraded.
+        A shallow copy with its class upgraded, or the original if
+        already a compat type or not a pandas object.
     """
     if obj is None:
         return None
     if type(obj) is _pd.DataFrame:
+        obj = obj.copy(deep=False)
         obj.__class__ = CompatDataFrame
         _ensure_compat_index(obj)
     elif type(obj) is _pd.Series:
+        obj = obj.copy(deep=False)
         obj.__class__ = CompatSeries
         _ensure_compat_index(obj)
     return obj
