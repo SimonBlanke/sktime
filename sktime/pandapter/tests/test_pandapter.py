@@ -128,21 +128,22 @@ class TestEnsureCompat:
     def test_converts_datetime_index(self):
         idx = _pd.date_range("2020-01-01", periods=3, freq="D")
         df = _pd.DataFrame({"v": [1, 2, 3]}, index=idx)
-        ensure_compat(df)
-        assert type(df.index) is CompatDatetimeIndex
+        result = ensure_compat(df)
+        assert type(result.index) is CompatDatetimeIndex
+        assert type(df.index) is _pd.DatetimeIndex  # original unchanged
 
     def test_converts_multiindex_datetime_level(self):
         dates = _pd.date_range("2020-01-01", periods=3, freq="D")
         arrays = [["a", "a", "a"], dates]
         mi = _pd.MultiIndex.from_arrays(arrays, names=["group", "date"])
         df = _pd.DataFrame({"v": [1, 2, 3]}, index=mi)
-        ensure_compat(df)
-        assert type(df.index.levels[-1]) is CompatDatetimeIndex
+        result = ensure_compat(df)
+        assert type(result.index.levels[-1]) is CompatDatetimeIndex
 
     def test_data_preserved(self):
         df = _pd.DataFrame({"a": [10, 20], "b": [30, 40]})
-        ensure_compat(df)
-        assert list(df["a"]) == [10, 20]
+        result = ensure_compat(df)
+        assert list(result["a"]) == [10, 20]
         assert list(df["b"]) == [30, 40]
 
 

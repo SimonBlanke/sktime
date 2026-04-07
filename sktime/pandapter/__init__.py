@@ -158,16 +158,30 @@ def ensure_native(obj):
 
 
 def _ensure_compat_index(obj):
-    """Upgrade DatetimeIndex instances on *obj* to CompatDatetimeIndex."""
+    """Upgrade DatetimeIndex instances on *obj* to CompatDatetimeIndex.
+
+    Creates a shallow copy of the index before reassigning its class so
+    that the original object's index (which may be shared via shallow copy)
+    is never mutated.
+    """
     if not hasattr(obj, "index"):
         return
     idx = obj.index
     if isinstance(idx, _pd.MultiIndex):
-        for level in idx.levels:
+        needs_update = False
+        new_levels = list(idx.levels)
+        for i, level in enumerate(new_levels):
             if type(level) is _pd.DatetimeIndex:
-                level.__class__ = CompatDatetimeIndex
+                new_level = level.copy()
+                new_level.__class__ = CompatDatetimeIndex
+                new_levels[i] = new_level
+                needs_update = True
+        if needs_update:
+            obj.index = idx.set_levels(new_levels)
     elif type(idx) is _pd.DatetimeIndex:
-        idx.__class__ = CompatDatetimeIndex
+        new_idx = idx.copy()
+        new_idx.__class__ = CompatDatetimeIndex
+        obj.index = new_idx
 
 
 def _ensure_native_index(obj):
