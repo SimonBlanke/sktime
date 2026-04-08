@@ -42,11 +42,13 @@ def _convert_tsf_to_hierarchical(
     df = data.copy()
 
     if freq is None:
+        from sktime.utils.pandas_compat import to_pandas_freq
+
         freq_map = {
             "4_seconds": "4S",
-            "minutely": "min",
-            "10_minutes": "10min",
-            "half_hourly": "30min",
+            "minutely": "T",
+            "10_minutes": "10T",
+            "half_hourly": "30T",
             "hourly": "H",
             "daily": "D",
             "weekly": "W",
@@ -56,6 +58,8 @@ def _convert_tsf_to_hierarchical(
             None: None,
         }
         freq = freq_map[metadata["frequency"]]
+        if freq is not None:
+            freq = to_pandas_freq(freq)
 
     # create the time index
     if "start_timestamp" in df.columns:

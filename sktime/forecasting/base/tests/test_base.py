@@ -24,6 +24,7 @@ from sktime.utils._testing.hierarchical import _make_hierarchical
 from sktime.utils._testing.panel import _make_panel
 from sktime.utils._testing.series import _make_series
 from sktime.utils.dependencies import _check_estimator_deps, _check_soft_dependencies
+from sktime.utils.pandas_compat import to_pandas_freq
 from sktime.utils.parallel import _get_parallel_test_fixtures
 
 PANEL_MTYPES = ["pd-multiindex", "nested_univ", "numpy3D"]
@@ -516,7 +517,10 @@ def test_panel_with_inner_freq():
 
     y = load_airline()
     ind = pd.date_range(
-        start="1960-01-01", periods=len(y.index), freq="H", name="datetime"
+        start="1960-01-01",
+        periods=len(y.index),
+        freq=to_pandas_freq("H"),
+        name="datetime",
     )
     y = pd.DataFrame(y.values, index=ind, columns=["passengers"])
 

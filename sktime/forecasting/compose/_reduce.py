@@ -2078,7 +2078,7 @@ class DirectReductionForecaster(BaseForecaster, _ReducerMixin):
         fh_idx = self._get_expected_pred_idx(fh=fh)
 
         if self.empty_lags_:
-            ret = pd.DataFrame(index=fh_idx, columns=y_cols)
+            ret = pd.DataFrame(index=fh_idx, columns=y_cols, dtype="float64")
             for i in ret.index:
                 ret.loc[i] = self.dummy_value_
             return ret
@@ -2215,7 +2215,7 @@ class DirectReductionForecaster(BaseForecaster, _ReducerMixin):
 
             # if = no training indices in _fit, fill in y training mean
             if isinstance(estimator, pd.Series):
-                y_pred_i = pd.DataFrame(index=[0], columns=y_cols)
+                y_pred_i = pd.DataFrame(index=[0], columns=y_cols, dtype="float64")
                 y_pred_i.iloc[0] = estimator
             # otherwise proceed as per direct reduction algorithm
             else:
@@ -2577,7 +2577,7 @@ class RecursiveReductionForecaster(BaseForecaster, _ReducerMixin):
 
             # if = no training indices in _fit, fill in y training mean
             if isinstance(estimator, pd.Series):
-                y_pred_i = pd.DataFrame(index=[0], columns=y_cols)
+                y_pred_i = pd.DataFrame(index=[0], columns=y_cols, dtype="float64")
                 y_pred_i.iloc[0] = estimator
             # otherwise proceed as per direct reduction algorithm
             else:
@@ -2627,7 +2627,7 @@ class RecursiveReductionForecaster(BaseForecaster, _ReducerMixin):
 
         # if = no training indices in _fit, fill in y training mean
         if isinstance(estimator, pd.Series):
-            y_pred = pd.DataFrame(index=fh_idx, columns=y_cols)
+            y_pred = pd.DataFrame(index=fh_idx, columns=y_cols, dtype="float64")
             y_pred = y_pred.fillna(self.estimator)
         # otherwise proceed as per direct reduction algorithm
         else:

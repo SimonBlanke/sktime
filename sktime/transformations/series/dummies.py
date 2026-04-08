@@ -8,6 +8,7 @@ import calendar
 import pandas as pd
 
 from sktime.transformations.base import BaseTransformer
+from sktime.utils.pandas_compat import normalize_freq
 
 
 class SeasonalDummiesOneHot(BaseTransformer):
@@ -164,7 +165,7 @@ class SeasonalDummiesOneHot(BaseTransformer):
         """
 
         def number_to_freq(number):
-            number_map = {1: "A", 4: "Q", 12: "M", 52: "W", 365: "D", 8760: "H"}
+            number_map = {1: "Y", 4: "Q", 12: "M", 52: "W", 365: "D", 8760: "H"}
             freq = number_map.get(number, None)
             if freq is None:
                 raise ValueError(f"Unsupported seasonal periodicity: {number}")
@@ -192,30 +193,31 @@ class SeasonalDummiesOneHot(BaseTransformer):
             period_index = index.to_period(freq)
 
         # Extract the appropriate attribute based on the frequency of the period index
-        if period_index.freqstr == "M":
+        freq = normalize_freq(period_index.freqstr)
+        if freq == "M":
             time_index = period_index.month
-        elif period_index.freqstr == "Q":
+        elif freq == "Q":
             time_index = period_index.quarter
-        elif period_index.freqstr == "W":
-            time_index = period_index.week
-        elif period_index.freqstr == "D":
+        elif freq == "W":
+            time_index = period_index.isocalendar().week
+        elif freq == "D":
             time_index = period_index.day
-        elif period_index.freqstr == "H":
+        elif freq == "H":
             time_index = period_index.hour
         else:
-            raise ValueError(f"Unsupported frequency: {period_index.freqstr}")
+            raise ValueError(f"Unsupported frequency: {freq}")
 
         # Create dummy variables for the time periods
         dummies = pd.get_dummies(time_index, prefix="", prefix_sep="")
-        if period_index.freqstr == "M":
+        if freq == "M":
             dummies.columns = dummies.columns.map(lambda x: calendar.month_abbr[int(x)])
-        elif period_index.freqstr == "Q":
+        elif freq == "Q":
             dummies.columns = dummies.columns.map(lambda x: f"Q{int(x)}")
-        elif period_index.freqstr == "W":
+        elif freq == "W":
             dummies.columns = dummies.columns.map(lambda x: f"W{int(x)}")
-        elif period_index.freqstr == "D":
+        elif freq == "D":
             dummies.columns = dummies.columns.map(lambda x: f"D{int(x)}")
-        elif period_index.freqstr == "H":
+        elif freq == "H":
             dummies.columns = dummies.columns.map(lambda x: f"H{int(x)}")
         dummies = dummies.astype(int)  # Convert boolean values to integers
 

@@ -15,6 +15,7 @@ from sktime.forecasting.trend import PolynomialTrendForecaster, TrendForecaster
 from sktime.forecasting.trend._util import _get_X_numpy_int_from_pandas
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils._testing.forecasting import make_forecasting_problem
+from sktime.utils.pandas_compat import to_pandas_freq
 
 
 @pytest.mark.skipif(
@@ -48,7 +49,7 @@ def test_get_X_numpy():
     # diffs should be 1/24, since this is converted to float, days since 1970
     df_hourly = pd.DataFrame(
         data=[10, 5, 4, 2, 10],
-        index=pd.date_range(start="2000-01-01", periods=5, freq="H"),
+        index=pd.date_range(start="2000-01-01", periods=5, freq=to_pandas_freq("H")),
     )
     X_idx_hourly = _get_X_numpy_int_from_pandas(df_hourly.index)
     assert isinstance(X_idx_hourly, np.ndarray)

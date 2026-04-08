@@ -12,6 +12,7 @@ import pytest
 
 from sktime.forecasting.fbprophet import Prophet
 from sktime.tests.test_switch import run_test_for_class
+from sktime.utils.pandas_compat import to_pandas_freq
 
 
 @pytest.mark.skipif(
@@ -58,7 +59,9 @@ def test_prophet_period_fh(convert_to_datetime):
     if convert_to_datetime:
         y = y.to_timestamp(freq="M")
 
-    fh_index = pd.PeriodIndex(pd.date_range("1961-01", periods=36, freq="M"))
+    fh_index = pd.PeriodIndex(
+        pd.date_range("1961-01", periods=36, freq=to_pandas_freq("M"))
+    )
     fh = ForecastingHorizon(fh_index, is_relative=False)
 
     forecaster = Prophet(

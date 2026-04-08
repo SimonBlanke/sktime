@@ -300,7 +300,7 @@ class ConformalIntervals(BaseForecaster):
         var_names = self._get_varnames()
 
         cols = pd.MultiIndex.from_product([var_names, coverage, ["lower", "upper"]])
-        pred_int = pd.DataFrame(index=fh_absolute_idx, columns=cols)
+        pred_int = pd.DataFrame(index=fh_absolute_idx, columns=cols, dtype="float64")
         for fh_ind, offset in zip(fh_absolute, fh_relative):
             resids = np.diagonal(residuals_matrix, offset=offset)
             resids = resids[~np.isnan(resids)]
@@ -341,7 +341,7 @@ class ConformalIntervals(BaseForecaster):
                 sign = 1
             pred_int[col] = y_pred + sign * pred_int[col]
 
-        return pred_int.convert_dtypes()
+        return pred_int
 
     def _parse_initial_window(self, y, initial_window=None):
         n_samples = len(y)

@@ -128,6 +128,8 @@ class ForecastingData(BaseForecastingDataset):
 
     def _to_sktime_multiindex(self, y, metadata):
         """Convert dataset into sktime pd-multiindex format with correct time index."""
+        from sktime.utils.pandas_compat import to_pandas_freq
+
         freq_map = {
             "yearly": "YS",
             "quarterly": "QS",
@@ -146,6 +148,8 @@ class ForecastingData(BaseForecastingDataset):
         if freq_label is not None:
             freq_label = freq_label.lower()
         freq = freq_map.get(freq_label)
+        if isinstance(freq, str):
+            freq = to_pandas_freq(freq)
         if freq is None:
             raise ValueError(f"Unknown frequency label: {freq_label}")
 

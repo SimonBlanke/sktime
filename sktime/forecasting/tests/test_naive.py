@@ -18,6 +18,7 @@ from sktime.forecasting.tests._config import (
 )
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils._testing.forecasting import _assert_correct_pred_time_index
+from sktime.utils.pandas_compat import to_pandas_freq
 from sktime.utils.validation.forecasting import check_fh
 
 n_timepoints = 30
@@ -331,7 +332,7 @@ def test_naive_predict_var_backwards(strategy, sp, window_length, n_periods):
     .. [1] https://otexts.com/fpp3/prediction-intervals.html#benchmark-methods
     """
     mu, sigma = 0.0, 10.0
-    fake_idx = pd.date_range("1980", periods=n_periods + 1, freq="H")
+    fake_idx = pd.date_range("1980", periods=n_periods + 1, freq=to_pandas_freq("H"))
     np.random.seed(42)
     y = pd.Series(np.random.normal(mu, sigma, size=n_periods), index=fake_idx[:-1])
 
@@ -379,7 +380,7 @@ def test_naive_predict_interval_mean(strategy, sp, window_length, fh):
     """
     n_timepoints = 100000
     mu, sigma = 0.0, 10.0
-    fake_idx = pd.date_range("1980", periods=n_timepoints + 1, freq="H")
+    fake_idx = pd.date_range("1980", periods=n_timepoints + 1, freq=to_pandas_freq("H"))
     np.random.seed(42)
     y = pd.Series(np.random.normal(mu, sigma, size=n_timepoints), index=fake_idx[:-1])
 
@@ -432,7 +433,7 @@ def test_naive_predict_interval_against_R_naive(strategy, sp, lower, upper):
     """
     n_timepoints = 100000
     mu, sigma = 0.0, 10.0
-    fake_idx = pd.date_range("1980", periods=n_timepoints + 1, freq="H")
+    fake_idx = pd.date_range("1980", periods=n_timepoints + 1, freq=to_pandas_freq("H"))
     np.random.seed(42)
     y = pd.Series(np.random.normal(mu, sigma, size=n_timepoints), index=fake_idx[:-1])
 

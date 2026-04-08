@@ -18,6 +18,7 @@ from sktime.datatypes._utilities import (
 )
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.utils._testing.hierarchical import _make_hierarchical
+from sktime.utils.pandas_compat import to_pandas_freq
 
 SCITYPE_MTYPE_PAIRS = [
     ("Series", "pd.Series"),
@@ -461,7 +462,10 @@ def test_retain_series_freq_on_update():
 
     # create dummy index with hourly timestamps and panel data by hour of day
     ind = pd.date_range(
-        start="1960-01-01 10:00:00", periods=len(y.index), freq="24H", name="datetime"
+        start="1960-01-01 10:00:00",
+        periods=len(y.index),
+        freq=to_pandas_freq("24H"),
+        name="datetime",
     )
     y = pd.Series(y.values, index=ind, name="passengers")
     y_train, y_test = temporal_train_test_split(y, test_size=2)

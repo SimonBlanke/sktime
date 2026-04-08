@@ -73,7 +73,9 @@ def moving_average(arr, window_size):
 
 def freq_map(freq):
     """freq_map."""
-    freq = str.upper(freq)
+    from sktime.utils.pandas_compat import normalize_freq
+
+    freq = str.upper(normalize_freq(freq))
     if (
         freq.endswith("H")
         or freq.endswith("T")
