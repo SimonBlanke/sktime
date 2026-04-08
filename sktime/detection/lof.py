@@ -207,6 +207,9 @@ class SubLOF(BaseDetector):
 
         if isinstance(interval_size, int) and not is_integer_index(x):
             interval_size = x.freq * interval_size
+        # DateOffset cannot be used in Timedelta division (pandas 3 removed this)
+        if isinstance(interval_size, pd.offsets.BaseOffset):
+            interval_size = pd.Timedelta(interval_size)
         n_intervals = math.floor(x_span / interval_size) + 1
 
         if x_max >= x_min + (n_intervals - 1) * interval_size:
