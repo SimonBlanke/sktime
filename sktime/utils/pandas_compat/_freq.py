@@ -103,6 +103,7 @@ def normalize_freq(freq_str):
 
     Examples
     --------
+    >>> from sktime.utils.pandas_compat import normalize_freq
     >>> normalize_freq("ME")
     'M'
     >>> normalize_freq("2h")
@@ -111,9 +112,9 @@ def normalize_freq(freq_str):
     'Q-DEC'
     >>> normalize_freq("30min")
     '30T'
-    >>> normalize_freq("M")   # already canonical, returned unchanged
+    >>> normalize_freq("M")
     'M'
-    >>> normalize_freq("A")   # old synonym normalized
+    >>> normalize_freq("A")
     'Y'
     """
     if freq_str is None or not isinstance(freq_str, str):
@@ -158,14 +159,6 @@ def to_pandas_freq(freq_str):
     str or None
         Frequency string appropriate for the installed pandas version.
 
-    Examples
-    --------
-    >>> to_pandas_freq("M")   # on pandas >= 2.2
-    'ME'
-    >>> to_pandas_freq("2H")  # on pandas >= 2.2
-    '2h'
-    >>> to_pandas_freq("M")   # on pandas < 2.2
-    'M'
     """
     if freq_str is None or not isinstance(freq_str, str):
         return freq_str
