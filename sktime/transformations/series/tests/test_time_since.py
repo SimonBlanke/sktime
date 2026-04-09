@@ -158,7 +158,8 @@ def test_fit_transform_datetime_monthly_idx_datetime_output(df_datetime_monthly_
         },
         index=df_datetime_monthly_idx.index,
     )
-    assert_frame_equal(Xt, expected)
+    # timedelta resolution can vary across pandas versions (s vs us)
+    assert_frame_equal(Xt, expected, check_dtype=False)
 
 
 @pytest.mark.skipif(
