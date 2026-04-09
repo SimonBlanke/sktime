@@ -247,12 +247,12 @@ class Imputer(BaseTransformer):
             elif self.method in ["pad", "ffill"]:
                 X = X.groupby(level=X_group_levels).ffill()
             elif self.method == "mean":
-                X = X.groupby(level=X_group_levels).transform(
-                    lambda x: x.fillna(value=self._mean)
+                X = X.groupby(level=X_group_levels, group_keys=False).apply(
+                    lambda g: g.fillna(self._mean.loc[g.name])
                 )
             elif self.method == "median":
-                X = X.groupby(level=X_group_levels).transform(
-                    lambda x: x.fillna(value=self._median)
+                X = X.groupby(level=X_group_levels, group_keys=False).apply(
+                    lambda g: g.fillna(self._median.loc[g.name])
                 )
             else:
                 raise AssertionError("Code should not be reached")
