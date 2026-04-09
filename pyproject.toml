@@ -1,3 +1,4 @@
+# trigger all CI module tests for reference run
 [project]
 name = "sktime"
 version = "0.40.1"
