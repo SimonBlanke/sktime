@@ -23,6 +23,7 @@ from sktime.datatypes._panel._convert import (
 from sktime.tests.test_switch import run_test_module_changed
 from sktime.utils._testing.panel import make_classification_problem
 from sktime.utils.dependencies import _check_soft_dependencies
+from sktime.utils.pandas_compat import to_pandas_freq
 
 N_INSTANCES = [10, 15]
 N_COLUMNS = [3, 5]
@@ -356,7 +357,9 @@ def test_from_multiindex_to_listdataset(n_instances, n_columns, n_timepoints):
         level1_idx = [
             list(
                 pd.date_range(
-                    random_start_date[instance], periods=n_timepoints, freq="H"
+                    random_start_date[instance],
+                    periods=n_timepoints,
+                    freq=to_pandas_freq("H"),
                 )
             )
             for instance in range(n_instances)

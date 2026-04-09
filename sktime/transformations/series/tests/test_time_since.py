@@ -12,6 +12,7 @@ from pandas.testing import assert_frame_equal
 from sktime.tests.test_switch import run_test_for_class
 from sktime.transformations.series.time_since import TimeSince
 from sktime.utils._testing.hierarchical import _make_hierarchical
+from sktime.utils.pandas_compat import to_pandas_freq
 
 
 @pytest.fixture
@@ -25,7 +26,7 @@ def df_datetime_15mins_idx():
     """Create timeseries with Datetime index, 15 minute frequency."""
     return pd.DataFrame(
         data={"y": [1, 1, 1, 1, 1]},
-        index=pd.date_range(start="2000-01-01", freq="15T", periods=5),
+        index=pd.date_range(start="2000-01-01", freq=to_pandas_freq("15T"), periods=5),
     )
 
 
@@ -157,7 +158,8 @@ def test_fit_transform_datetime_monthly_idx_datetime_output(df_datetime_monthly_
         },
         index=df_datetime_monthly_idx.index,
     )
-    assert_frame_equal(Xt, expected)
+    # timedelta resolution can vary across pandas versions (s vs us)
+    assert_frame_equal(Xt, expected, check_dtype=False)
 
 
 @pytest.mark.skipif(

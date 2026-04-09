@@ -13,6 +13,7 @@ from sktime.forecasting.tests._config import TEST_OOS_FHS
 from sktime.forecasting.theta import ThetaForecaster, ThetaModularForecaster
 from sktime.split import temporal_train_test_split
 from sktime.tests.test_switch import run_test_for_class
+from sktime.utils.pandas_compat import to_pandas_freq
 from sktime.utils.validation.forecasting import check_fh
 
 
@@ -133,7 +134,9 @@ def check_panel_theta_quantiles():
     """Test predict quantiles with theta on panel data with datetime index."""
     # make panel with hour of day panel and datetime index
     y = load_airline()
-    y.index = pd.date_range(start="1960-01-01", periods=len(y.index), freq="H")
+    y.index = pd.date_range(
+        start="1960-01-01", periods=len(y.index), freq=to_pandas_freq("H")
+    )
     y.index.names = ["datetime"]
     y.name = "passengers"
     y = y.to_frame()

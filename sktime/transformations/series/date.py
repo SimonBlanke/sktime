@@ -243,7 +243,7 @@ class DateTimeFeatures(BaseTransformer):
         Xt : pd.Series or pd.DataFrame, same type as X
             transformed version of X
         """
-        _check_ts_freq(self.ts_freq, self.dummies)
+        ts_freq = _check_ts_freq(self.ts_freq, self.dummies)
         _check_feature_scope(self.feature_scope)
         _check_manual_selection(self.manual_selection, self.dummies)
 
@@ -261,8 +261,8 @@ class DateTimeFeatures(BaseTransformer):
             raise ValueError("Index type not supported")
 
         if self.manual_selection is None:
-            if self.ts_freq is not None:
-                supported = _get_supported_calendar(self.ts_freq, DUMMIES=self.dummies)
+            if ts_freq is not None:
+                supported = _get_supported_calendar(ts_freq, DUMMIES=self.dummies)
                 supported = supported[supported["feature_scope"] <= self.feature_scope]
                 calendar_dummies = supported[["dummy_func", "dummy"]]
             else:
@@ -271,8 +271,8 @@ class DateTimeFeatures(BaseTransformer):
                 ]
                 calendar_dummies = supported[["dummy_func", "dummy"]]
         else:
-            if self.ts_freq is not None:
-                supported = _get_supported_calendar(self.ts_freq, DUMMIES=self.dummies)
+            if ts_freq is not None:
+                supported = _get_supported_calendar(ts_freq, DUMMIES=self.dummies)
                 if not all(
                     elem in supported["dummy"] for elem in self.manual_selection
                 ):
@@ -344,11 +344,15 @@ def _check_feature_scope(feature_scope):
 
 
 def _check_ts_freq(ts_freq, DUMMIES):
+    from sktime.utils.pandas_compat import normalize_freq
+
+    ts_freq = normalize_freq(ts_freq)
     if (ts_freq is not None) & (ts_freq not in DUMMIES["ts_frequency"].unique()):
         raise ValueError(
             "Invalid ts_freq specified, must be in: "
             + ", ".join(DUMMIES["ts_frequency"].unique())
         )
+    return ts_freq
 
 
 def _calendar_dummies(x, funcs):

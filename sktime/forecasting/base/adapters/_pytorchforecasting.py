@@ -650,9 +650,12 @@ class _PytorchForecastingAdapter(_BaseGlobalForecaster):
             freq=fh.freq,
         )
         index = _fh.to_absolute_index(self.cutoff)
-        _y = pd.DataFrame(index=index, columns=y.columns)
+        _y = pd.DataFrame(
+            data=np.zeros((len(index), len(y.columns))),
+            index=index,
+            columns=y.columns,
+        )
         _y.index.rename(y.index.names[-1], inplace=True)
-        _y.fillna(0, inplace=True)
         len_levels = len(y.index.names)
         if len_levels == 1:
             _y = pd.concat([y, _y])

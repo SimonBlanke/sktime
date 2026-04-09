@@ -570,6 +570,8 @@ def _check_ts_freq(x_df, datetime_freq, ts_freq):
     check 1- Determine whether input ts_freq is valid or not.
     check 2- Compare the frequency of main dataframe with 'ts_freq'.
 
+    Normalizes ts_freq so that new-style aliases ("h", "ME") are accepted.
+
     Parameters
     ----------
     x_df : DataFrame
@@ -588,6 +590,9 @@ def _check_ts_freq(x_df, datetime_freq, ts_freq):
         {"H", "D", "W", "M", "Q", "Y"}
         2- Level of base dataframe ts_frequency  is lower than selected ts_freq
     """
+    from sktime.utils.pandas_compat import normalize_freq
+
+    ts_freq = normalize_freq(ts_freq)
     # Check 1: Determine whether input ts_freq is valid or not
     freq_list = datetime_freq["frequency"].tolist()
     if (ts_freq is not None) & (ts_freq not in freq_list):
@@ -595,7 +600,7 @@ def _check_ts_freq(x_df, datetime_freq, ts_freq):
 
     # Check 2: Compare the frequency of main dataframe with 'ts_freq'
     # 2-1: Determine frequency of main DataFrame, find in ranking
-    main_df_datetime_freq = pd.infer_freq(x_df["date_sequence"])[0]
+    main_df_datetime_freq = normalize_freq(pd.infer_freq(x_df["date_sequence"]))[0]
     rank_main_df = datetime_freq.loc[
         datetime_freq["frequency"] == main_df_datetime_freq, "rank"
     ].max()

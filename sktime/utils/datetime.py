@@ -12,8 +12,12 @@ import pandas as pd
 
 from sktime.datatypes import VectorizedDF
 from sktime.datatypes._utilities import get_time_index
+from sktime.utils.pandas_compat import (
+    get_offset_n_and_freqstr,
+    normalize_freq,
+    to_pandas_freq,
+)
 from sktime.utils.validation.series import check_time_index, is_integer_index
-from sktime.utils.warnings import _suppress_pd22_warning
 
 
 def _coerce_duration_to_int(
@@ -69,11 +73,9 @@ def _get_intervals_count_and_unit(freq: str) -> tuple[int, str]:
     """
     if freq is None:
         raise ValueError("frequency is missing")
-    else:
-        with _suppress_pd22_warning():
-            offset = pd.tseries.frequencies.to_offset(freq)
-        count, unit = offset.n, offset.base.freqstr
-        return count, unit
+    count, base = get_offset_n_and_freqstr(freq)
+    # to_pandas_freq converts canonical old-style to what pd.Timedelta expects
+    return count, to_pandas_freq(base)
 
 
 def _get_freq(x):
@@ -82,9 +84,9 @@ def _get_freq(x):
         if x.freqstr is None:
             return None
         elif "-" in x.freqstr:
-            return x.freqstr.split("-")[0]
+            return normalize_freq(x.freqstr.split("-")[0])
         else:
-            return x.freqstr
+            return normalize_freq(x.freqstr)
     else:
         return None
 
@@ -170,10 +172,10 @@ def _infer_freq_from_index(index: pd.Index) -> str | None:
         or `None`, if inference fails.
     """
     if hasattr(index, "freqstr"):
-        return index.freqstr
+        return normalize_freq(index.freqstr)
     else:
         try:
-            return pd.infer_freq(index)
+            return normalize_freq(pd.infer_freq(index))
         except (TypeError, ValueError):
             return None
 

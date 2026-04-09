@@ -12,6 +12,7 @@ from sktime.forecasting.model_evaluation import evaluate
 from sktime.forecasting.structural import UnobservedComponents
 from sktime.split import SlidingWindowSplitter
 from sktime.tests.test_switch import run_test_for_class
+from sktime.utils.pandas_compat import to_pandas_freq
 
 
 class ModelSpec:
@@ -140,7 +141,11 @@ def level_sample_data(request):
     max_date = pd.to_datetime("2022-01-01")
 
     data_df = pd.DataFrame(
-        data={"date": pd.date_range(start=min_date, end=max_date, freq="M")}
+        data={
+            "date": pd.date_range(
+                start=min_date, end=max_date, freq=to_pandas_freq("M")
+            )
+        }
     )
 
     n = data_df.shape[0]

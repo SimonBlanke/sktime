@@ -178,7 +178,9 @@ class _PmdArimaAdapter(BaseForecaster):
         if return_pred_int:
             pred_ints = []
             for a in alpha:
-                pred_int = pd.DataFrame(index=fh_abs, columns=["lower", "upper"])
+                pred_int = pd.DataFrame(
+                    index=fh_abs, columns=["lower", "upper"], dtype="float64"
+                )
                 result = self._forecaster.predict_in_sample(
                     start=start,
                     end=end,

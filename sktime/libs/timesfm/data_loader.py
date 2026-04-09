@@ -44,7 +44,7 @@ class TimeSeriesdata:
         hist_len,
         pred_len,
         batch_size,
-        freq="H",
+        freq="h",
         normalize=True,
         epoch_len=None,
         holiday=False,

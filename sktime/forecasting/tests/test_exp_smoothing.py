@@ -12,6 +12,7 @@ from sktime.forecasting.exp_smoothing import ExponentialSmoothing
 from sktime.split import temporal_train_test_split
 from sktime.tests.test_switch import run_test_for_class
 from sktime.utils._testing.forecasting import make_forecasting_problem
+from sktime.utils.pandas_compat import to_pandas_freq
 
 # load test data
 y = make_forecasting_problem()
@@ -47,7 +48,9 @@ def check_panel_expsmooth():
     """Test exponential smoothing on panel data with datetime index."""
     # make panel with hour of day panel and datetime index
     y = load_airline()
-    y.index = pd.date_range(start="1960-01-01", periods=len(y.index), freq="H")
+    y.index = pd.date_range(
+        start="1960-01-01", periods=len(y.index), freq=to_pandas_freq("H")
+    )
     y.index.names = ["datetime"]
     y.name = "passengers"
     y = y.to_frame()
@@ -68,7 +71,10 @@ def check_panel_with_freq():
     # make panel with hour of day panel and datetime index
     y = load_airline()
     ind = pd.date_range(
-        start="1960-01-01", periods=len(y.index), freq="H", name="datetime"
+        start="1960-01-01",
+        periods=len(y.index),
+        freq=to_pandas_freq("H"),
+        name="datetime",
     )
     y = pd.DataFrame(y.values, index=ind, columns=["passengers"])
     y = y.set_index([y.index.hour.rename("hour"), y.index]).sort_index()

@@ -42,6 +42,7 @@ from sktime.utils.datetime import (
     infer_freq,
 )
 from sktime.utils.dependencies import _check_estimator_deps, _check_soft_dependencies
+from sktime.utils.pandas_compat import to_pandas_freq
 from sktime.utils.validation.series import is_in_valid_index_types, is_integer_index
 
 
@@ -433,7 +434,9 @@ def _get_expected_freqstr(freqstr):
 @pytest.mark.parametrize("freqstr", FREQUENCY_STRINGS)
 def test_to_absolute_freq(freqstr):
     """Test conversion when anchorings included in frequency."""
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freqstr, periods=3))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freqstr), periods=3)
+    )
     cutoff = get_cutoff(train, return_index=True)
     fh = ForecastingHorizon([1, 2, 3])
 
@@ -449,7 +452,9 @@ def test_to_absolute_freq(freqstr):
 def test_absolute_to_absolute_with_integer_horizon(freqstr):
     """Test converting between absolute and relative with integer horizon."""
     # Converts from absolute to relative and back to absolute
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freqstr, periods=3))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freqstr), periods=3)
+    )
     cutoff = get_cutoff(train, return_index=True)
     fh = ForecastingHorizon([1, 2, 3])
     abs_fh = fh.to_absolute(cutoff)
@@ -468,11 +473,15 @@ def test_absolute_to_absolute_with_integer_horizon(freqstr):
 def test_absolute_to_absolute_with_timedelta_horizon(freqstr):
     """Test converting between absolute and relative."""
     # Converts from absolute to relative and back to absolute
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freqstr, periods=3))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freqstr), periods=3)
+    )
     cutoff = get_cutoff(train, return_index=True)
     count, unit = _get_intervals_count_and_unit(freq=freqstr)
     fh = ForecastingHorizon(
-        pd.timedelta_range(pd.to_timedelta(count, unit=unit), freq=freqstr, periods=3)
+        pd.timedelta_range(
+            pd.to_timedelta(count, unit=unit), freq=to_pandas_freq(freqstr), periods=3
+        )
     )
     abs_fh = fh.to_absolute(cutoff)
 
@@ -490,7 +499,9 @@ def test_absolute_to_absolute_with_timedelta_horizon(freqstr):
 def test_relative_to_relative_with_integer_horizon(freqstr):
     """Test converting between relative and absolute with integer horizons."""
     # Converts from relative to absolute and back to relative
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freqstr, periods=3))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freqstr), periods=3)
+    )
     cutoff = get_cutoff(train, return_index=True)
     fh = ForecastingHorizon([1, 2, 3])
     abs_fh = fh.to_absolute(cutoff)
@@ -507,11 +518,15 @@ def test_relative_to_relative_with_integer_horizon(freqstr):
 def test_relative_to_relative_with_timedelta_horizon(freqstr):
     """Test converting between relative and absolute with timedelta horizons."""
     # Converts from relative to absolute and back to relative
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freqstr, periods=3))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freqstr), periods=3)
+    )
     cutoff = get_cutoff(train, return_index=True)
     count, unit = _get_intervals_count_and_unit(freq=freqstr)
     fh = ForecastingHorizon(
-        pd.timedelta_range(pd.to_timedelta(count, unit=unit), freq=freqstr, periods=3)
+        pd.timedelta_range(
+            pd.to_timedelta(count, unit=unit), freq=to_pandas_freq(freqstr), periods=3
+        )
     )
     abs_fh = fh.to_absolute(cutoff)
 
@@ -530,7 +545,7 @@ def test_to_relative(freq: str):
     Fixes bug in
     https://github.com/sktime/sktime/issues/1935#issue-1114814142
     """
-    freq = "2H"
+    freq = to_pandas_freq("2H")
     t = pd.date_range(start="2021-01-01", freq=freq, periods=5)
     cutoff = get_cutoff(t, return_index=True, reverse_order=True)
     fh_abs = ForecastingHorizon(t, is_relative=False)
@@ -547,7 +562,9 @@ def test_to_relative(freq: str):
 def test_to_absolute_int(idx: int, freq: str):
     """Test converting between relative and absolute."""
     # Converts from relative to absolute and back to relative
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freq, periods=5))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freq), periods=5)
+    )
     fh = ForecastingHorizon([1, 2, 3])
     cutoff = train.index[[idx]]
     cutoff.freq = train.index.freq
@@ -564,7 +581,9 @@ def test_to_absolute_int(idx: int, freq: str):
 def test_to_absolute_int_fh_with_freq(idx: int, freq: str):
     """Test converting between relative and absolute, freq passed to fh."""
     # Converts from relative to absolute and back to relative
-    train = pd.Series(1, index=pd.date_range("2021-10-06", freq=freq, periods=5))
+    train = pd.Series(
+        1, index=pd.date_range("2021-10-06", freq=to_pandas_freq(freq), periods=5)
+    )
     fh = ForecastingHorizon([1, 2, 3], freq=freq)
     cutoff = train.index[idx]
     absolute_int = fh.to_absolute_int(start=train.index[0], cutoff=cutoff)
@@ -578,7 +597,7 @@ def test_to_absolute_with_multiple_freq(freq: str):
     start = "2024-09-26 17:24"
     cutoff = pd.PeriodIndex([start], freq=freq)
     absolute = fh.to_absolute(cutoff)
-    date_range = pd.date_range(start=start, freq=freq, periods=5)
+    date_range = pd.date_range(start=start, freq=to_pandas_freq(freq), periods=5)
     period_index = date_range.to_period(freq)
     assert_array_equal(period_index.to_numpy(), absolute.to_numpy())
 
@@ -592,7 +611,7 @@ def test_estimator_fh(freqstr):
     """Test model fitting with anchored frequency."""
     train = pd.Series(
         np.random.uniform(low=2000, high=7000, size=(104,)),
-        index=pd.date_range("2019-01-02", freq=freqstr, periods=104),
+        index=pd.date_range("2019-01-02", freq=to_pandas_freq(freqstr), periods=104),
     )
     forecaster = NaiveForecaster()
     forecaster.fit(train)
@@ -645,7 +664,7 @@ def test_auto_ets():
 
     https://github.com/sktime/sktime/issues/1435#issue-1000175469
     """
-    freq = "30T"
+    freq = to_pandas_freq("30T")
     _y = np.arange(50) + np.random.rand(50) + np.sin(np.arange(50) / 4) * 10
     t = pd.date_range("2021-09-19", periods=50, freq=freq)
     y = pd.Series(_y, index=t)
@@ -670,7 +689,7 @@ def test_auto_ets_case_with_naive():
 
     https://github.com/sktime/sktime/issues/1435#issue-1000175469
     """
-    freq = "30T"
+    freq = to_pandas_freq("30T")
     _y = np.arange(50) + np.random.rand(50) + np.sin(np.arange(50) / 4) * 10
     t = pd.date_range("2021-09-19", periods=50, freq=freq)
     y = pd.Series(_y, index=t)
@@ -1036,7 +1055,7 @@ def test_pandas22_freq(freq):
     """
     fh = ForecastingHorizon([1, 2, 3])
 
-    datetime_ = pd.date_range("1/1/1870", periods=20, freq=freq)
+    datetime_ = pd.date_range("1/1/1870", periods=20, freq=to_pandas_freq(freq))
     cutoff = datetime_[[-1]]
     cutoff.freq = datetime_.freq
 
