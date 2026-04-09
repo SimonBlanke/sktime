@@ -44,5 +44,7 @@ def pytest_configure(config):
 
     if config.getoption("--matrixdesign") in [True, "True"]:
         _config.MATRIXDESIGN = True
-    if config.getoption("--only_changed_modules") in [True, "True"]:
-        _config.ONLY_CHANGED_MODULES = True
+    # Force ONLY_CHANGED_MODULES to False for baseline reference CI run.
+    # This ensures every test runs regardless of whether the corresponding
+    # module was changed, giving us a clean reference of which tests pass on main.
+    _config.ONLY_CHANGED_MODULES = False
