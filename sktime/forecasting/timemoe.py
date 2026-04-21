@@ -104,6 +104,9 @@ class TimeMoEForecaster(_BaseGlobalForecaster):
     >>> y_pred = forecaster.predict(fh=[1, 2, 3], y = y_test)
     """
 
+    # dummy attribute to trigger CI tests on this file, remove after verification
+    _ci_trigger = True
+
     _tags = {
         # packaging info
         # --------------

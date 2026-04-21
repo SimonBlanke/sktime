@@ -239,6 +239,9 @@ class PatchTSTForecaster(_BaseGlobalForecaster):
     >>> y_pred = forecaster.predict() # doctest: +SKIP
     """
 
+    # dummy attribute to trigger CI tests on this file, remove after verification
+    _ci_trigger = True
+
     _tags = {
         "X_inner_mtype": [
             "pd.DataFrame",

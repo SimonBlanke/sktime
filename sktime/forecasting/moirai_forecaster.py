@@ -75,6 +75,9 @@ class MOIRAIForecaster(_BaseGlobalForecaster):
     .. [2] https://pypi.org/project/uni2ts/1.1.0/
     """
 
+    # dummy attribute to trigger CI tests on this file, remove after verification
+    _ci_trigger = True
+
     _tags = {
         # packaging info
         # --------------
