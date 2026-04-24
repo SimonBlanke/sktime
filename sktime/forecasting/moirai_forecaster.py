@@ -20,7 +20,8 @@ class MOIRAIForecaster(_BaseGlobalForecaster):
     checkpoint_path : str, default=None
         Path to the checkpoint of the model. Supported weights are available at [1]_.
     context_length : int, default=200
-        Length of the context window, time points the model will take as input for inference.
+        Length of the context window, time points the model will take
+        as input for inference.
     patch_size : int, default=32
         Time steps to perform patching with.
     num_samples : int, default=100
@@ -74,6 +75,9 @@ class MOIRAIForecaster(_BaseGlobalForecaster):
     .. [1] https://huggingface.co/collections/sktime/moirai-variations-66ba3bc9f1dfeeafaed3b974
     .. [2] https://pypi.org/project/uni2ts/1.1.0/
     """
+
+    # dummy attribute to trigger CI tests on this file, remove after verification
+    _ci_trigger = True
 
     _tags = {
         # packaging info

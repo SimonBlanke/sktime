@@ -252,6 +252,9 @@ class TinyTimeMixerForecaster(_BaseGlobalForecaster):
     >>> y_pred = forecaster.predict(X=X_future)
     """
 
+    # dummy attribute to trigger CI tests on this file, remove after verification
+    _ci_trigger = True
+
     _tags = {
         # packaging info
         # --------------

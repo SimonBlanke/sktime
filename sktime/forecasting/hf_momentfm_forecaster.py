@@ -135,6 +135,9 @@ class MomentFMForecaster(_BaseGlobalForecaster):
     >>> y_pred = forecaster.predict(y = y) # doctest: +SKIP
     """
 
+    # dummy attribute to trigger CI tests on this file, remove after verification
+    _ci_trigger = True
+
     _tags = {
         "capability:multivariate": True,
         "authors": ["julian-fong"],
