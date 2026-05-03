@@ -1,5 +1,7 @@
 name: test all
 on:
+  schedule:
+    - cron: 0 18 * * 4
   workflow_dispatch:
 
 jobs:
