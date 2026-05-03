@@ -1,4 +1,7 @@
-"""Adapter for using MOIRAI Forecasters."""
+"""Adapter for using MOIRAI Forecasters.
+
+Implements MOIRAIForecaster, wrapping the Salesforce uni2ts MOIRAI model.
+"""
 
 from unittest.mock import patch
 

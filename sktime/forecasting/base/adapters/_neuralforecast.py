@@ -1,5 +1,8 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
-"""Implements adapter for NeuralForecast models."""
+"""Implements adapter for NeuralForecast models.
+
+Provides base adapter class for Nixtla NeuralForecast model integration.
+"""
 
 import abc
 import functools

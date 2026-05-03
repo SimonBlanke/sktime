@@ -1,5 +1,8 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
-"""Adapter for using the huggingface PatchTST for forecasting."""
+"""Adapter for using the huggingface PatchTST for forecasting.
+
+Implements PatchTSTForecaster, wrapping the HuggingFace PatchTST model.
+"""
 
 __author__ = [
     "julian-fong",

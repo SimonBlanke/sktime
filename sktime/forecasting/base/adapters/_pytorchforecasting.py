@@ -1,5 +1,8 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
-"""Implements adapter for pytorch-forecasting models."""
+"""Implements adapter for pytorch-forecasting models.
+
+Provides base adapter class for pytorch-forecasting model integration.
+"""
 
 import abc
 import functools

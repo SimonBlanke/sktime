@@ -1,4 +1,7 @@
-"""Implements TimeMOE forecaster."""
+"""Implements TimeMOE forecaster.
+
+Wraps the Time-MoE (Mixture of Experts) foundation model for time series.
+"""
 
 __author__ = ["Maple728", "KimMeen", "PranavBhatP"]
 # Maple728 and KimMeen for timemoe

@@ -1,5 +1,8 @@
 # copyright: sktime developers, BSD-3-Clause License (see LICENSE file)
-"""Implementation of TimesFM (Time Series Foundation Model)."""
+"""Implementation of TimesFM (Time Series Foundation Model).
+
+Wraps Google's TimesFM foundation model for time series forecasting.
+"""
 
 __author__ = ["rajatsen91", "geetu040"]
 # rajatsen91 for google-research/timesfm
