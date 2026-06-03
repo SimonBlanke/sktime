@@ -1,4 +1,7 @@
-"""Interface for the momentfm deep learning time series forecaster."""
+"""Interface for the momentfm deep learning time series forecaster.
+
+Wraps the MOMENT foundation model for time series forecasting.
+"""
 
 import warnings
 
